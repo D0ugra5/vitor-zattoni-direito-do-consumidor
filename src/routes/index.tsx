@@ -15,7 +15,7 @@ import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import heroImage from "@/assets/hero-library.jpg";
-import aboutImage from "@/assets/about-books.jpg";
+import aboutImage from "@/assets/vitor-zattoni.png";
 import transitionImage from "@/assets/transition-columns.jpg";
 
 export const Route = createFileRoute("/")({
