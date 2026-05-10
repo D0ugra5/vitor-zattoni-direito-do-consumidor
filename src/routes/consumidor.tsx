@@ -197,7 +197,7 @@ function Intro() {
           <div className="reveal md:col-span-3">
             <span className="text-xs uppercase tracking-[0.3em] text-gold">Visão geral</span>
             <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
-              Relações de consumo podem envolver dúvidas, prejuízos e insegurança
+              Quando uma empresa falha, o consumidor não precisa lidar com tudo sozinho
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
             <p className="mt-8 leading-relaxed text-offwhite/80">
