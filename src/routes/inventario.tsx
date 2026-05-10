@@ -99,11 +99,10 @@ const documentos = [
 ];
 
 const faq = [
-  { q: "Todo falecimento exige inventário?", a: "O inventário costuma ser necessário quando a pessoa falecida deixou bens, direitos, valores, dívidas ou situações patrimoniais que precisam ser regularizadas." },
+  { q: "Todo falecimento exige inventário?", a: "O inventário é necessário quando a pessoa falecida deixou bens, direitos, valores, dívidas ou situações patrimoniais que precisam ser regularizadas." },
   { q: "O inventário pode ser feito em cartório?", a: "Em alguns casos, sim. O inventário extrajudicial pode ser uma possibilidade quando os requisitos legais estão presentes, como acordo entre os herdeiros e documentação adequada." },
   { q: "E se os herdeiros não estiverem de acordo?", a: "Quando há divergência entre herdeiros ou outras questões específicas, pode ser necessário avaliar a via judicial." },
   { q: "Preciso reunir todos os documentos antes de falar com o advogado?", a: "Não necessariamente. O primeiro contato pode ajudar a entender quais documentos serão necessários para a análise do caso." },
-  { q: "O inventário envolve dívidas?", a: "Pode envolver. É importante avaliar bens, direitos e eventuais obrigações deixadas pela pessoa falecida." },
   { q: "O atendimento pode ser online?", a: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais." },
 ];
 
