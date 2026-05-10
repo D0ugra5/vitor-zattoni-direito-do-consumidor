@@ -246,7 +246,7 @@ function Situacoes() {
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <Icon className="mx-auto h-8 w-8 text-gold" strokeWidth={1.25} />
-              <div className="mt-6 h-px w-12 bg-gold/60 transition-all duration-300 group-hover:w-20" />
+              <div className="mx-auto mt-6 h-px w-12 bg-gold/60 transition-all duration-300 group-hover:w-20" />
               <h3 className="mt-6 font-display text-2xl text-offwhite">{title}</h3>
               <p className="mt-4 text-sm leading-relaxed text-offwhite/70">{text}</p>
             </article>
