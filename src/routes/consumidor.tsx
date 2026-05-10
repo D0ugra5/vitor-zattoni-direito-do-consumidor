@@ -128,8 +128,6 @@ function Page() {
       <Intro />
       <Situacoes />
       <ComoAjuda />
-      <ComoFunciona />
-      <Documentos />
       <FAQ />
       <FinalCTA />
       <Footer />
