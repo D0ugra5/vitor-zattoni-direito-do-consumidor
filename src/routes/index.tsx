@@ -191,15 +191,14 @@ function Intro() {
 
 function Areas() {
   return (
-    <section id="areas" className="relative border-t border-gold/15 bg-navy-mid py-24 md:py-36">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-deep/60 to-transparent" />
+    <section id="areas" className="relative border-t border-gold/20 bg-ivory py-24 md:py-36">
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-gold">Atuação</span>
-          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
+          <h2 className="mt-6 font-display text-3xl font-medium text-navy-deep md:text-5xl">
             Áreas de atuação
           </h2>
-          <p className="mt-5 text-offwhite/70">
+          <p className="mt-5 text-muted-ink">
             Conheça as principais frentes de atuação jurídica.
           </p>
         </div>
@@ -208,16 +207,16 @@ function Areas() {
           {areas.map(({ to, icon: Icon, title, text }, i) => (
             <article
               key={title}
-              className="card-gold reveal group flex flex-col rounded-sm p-8"
+              className="reveal group flex flex-col rounded-sm border border-gold/30 bg-white p-8 shadow-[0_8px_30px_-12px_rgba(11,22,40,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_18px_40px_-18px_rgba(201,163,92,0.35)]"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <Icon className="h-8 w-8 text-gold" strokeWidth={1.25} />
               <div className="mt-6 h-px w-12 bg-gold/60 transition-all duration-300 group-hover:w-20" />
-              <h3 className="mt-6 font-display text-2xl text-offwhite">{title}</h3>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-offwhite/70">{text}</p>
+              <h3 className="mt-6 font-display text-2xl text-navy-deep">{title}</h3>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-ink">{text}</p>
               <Link
                 to={to}
-                className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-gold transition-all hover:gap-3"
+                className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-navy-deep transition-all hover:gap-3 hover:text-gold"
               >
                 Conhecer área <ArrowRight className="h-3.5 w-3.5" />
               </Link>
@@ -297,26 +296,25 @@ function Row({ label, value }: { label: string; value: string }) {
 
 function Principles() {
   return (
-    <section className="relative border-t border-gold/15 bg-navy-mid py-24 md:py-36">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-deep/60 to-transparent" />
+    <section className="relative border-t border-gold/20 bg-ivory py-24 md:py-36">
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-gold">Valores</span>
-          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
+          <h2 className="mt-6 font-display text-3xl font-medium text-navy-deep md:text-5xl">
             Princípios que orientam o atendimento
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-gold/20 bg-gold/20 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-gold/30 bg-gold/30 sm:grid-cols-2 lg:grid-cols-4">
           {principles.map(({ icon: Icon, title, text }, i) => (
             <div
               key={title}
-              className="reveal flex flex-col items-start bg-navy-deep p-8"
+              className="reveal flex flex-col items-start bg-white p-8"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <Icon className="h-7 w-7 text-gold" strokeWidth={1.25} />
-              <h3 className="mt-6 font-display text-xl text-offwhite">{title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-offwhite/70">{text}</p>
+              <h3 className="mt-6 font-display text-xl text-navy-deep">{title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-ink">{text}</p>
             </div>
           ))}
         </div>
