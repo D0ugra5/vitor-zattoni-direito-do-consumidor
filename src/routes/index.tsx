@@ -238,7 +238,7 @@ function About() {
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-gold/40">
               <img
                 src={aboutImage}
-                alt="Livros jurídicos sobre mesa de madeira"
+                alt="Vitor Zattoni, advogado"
                 className="h-full w-full object-cover"
                 loading="lazy"
                 width={1024}
