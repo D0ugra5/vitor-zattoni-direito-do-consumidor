@@ -253,7 +253,7 @@ function About() {
               Vitor Zattoni Advogado
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
-            <p className="mt-8 leading-relaxed text-offwhite/75">
+            <p className="mt-8 indent-8 text-justify leading-relaxed text-offwhite/75">
               Advogado formado pela PUCPR, com experiência acadêmica internacional em
               Direito Internacional e Europeu pela University of Silesia, na Polônia.
               Possui MBA em Gestão e Business Law pela FGV e pós-graduação em Direito
