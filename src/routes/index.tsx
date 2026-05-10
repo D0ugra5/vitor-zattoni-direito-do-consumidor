@@ -338,7 +338,7 @@ function Transition() {
         <div className="reveal">
           <div className="mx-auto h-px w-16 gold-divider" />
           <p className="mt-10 font-display text-2xl leading-relaxed text-offwhite md:text-4xl">
-            "Atenção aos detalhes e compromisso com decisões mais seguras."
+            "Análise cuidadosa para decisões jurídicas mais seguras"
           </p>
           <div className="mx-auto mt-10 h-px w-16 gold-divider" />
         </div>
