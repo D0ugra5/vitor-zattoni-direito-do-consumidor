@@ -301,8 +301,8 @@ function Analise() {
             <div className="h-full rounded-sm border-l-2 border-gold/70 bg-navy-deep/50 p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)]">
               <AlertTriangle className="h-7 w-7 text-gold" strokeWidth={1.25} />
               <p className="mt-6 font-display text-xl italic leading-relaxed text-offwhite/90">
-                "A atuação preventiva pode ser mais segura do que tentar corrigir um
-                problema depois que ele já ocorreu."
+                "Comprar um imóvel sem analisar a documentação é assumir riscos que
+                poderiam ter sido identificados antes da assinatura."
               </p>
             </div>
           </aside>
