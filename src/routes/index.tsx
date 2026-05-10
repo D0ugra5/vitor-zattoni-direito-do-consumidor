@@ -207,16 +207,16 @@ function Areas() {
           {areas.map(({ to, icon: Icon, title, text }, i) => (
             <article
               key={title}
-              className="reveal group flex flex-col rounded-sm border border-gold/25 bg-ivory p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_20px_50px_-18px_rgba(201,163,92,0.35)]"
+              className="reveal group flex flex-col rounded-sm border border-gold/25 bg-navy-deep/60 p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_20px_50px_-18px_rgba(201,163,92,0.35)]"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <Icon className="h-8 w-8 text-gold" strokeWidth={1.25} />
               <div className="mt-6 h-px w-12 bg-gold/60 transition-all duration-300 group-hover:w-20" />
-              <h3 className="mt-6 font-display text-2xl text-navy-deep">{title}</h3>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-ink">{text}</p>
+              <h3 className="mt-6 font-display text-2xl text-offwhite">{title}</h3>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-offwhite/70">{text}</p>
               <Link
                 to={to}
-                className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-navy-deep transition-all hover:gap-3 hover:text-gold"
+                className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-gold transition-all hover:gap-3 hover:text-gold-soft"
               >
                 Conhecer área <ArrowRight className="h-3.5 w-3.5" />
               </Link>
