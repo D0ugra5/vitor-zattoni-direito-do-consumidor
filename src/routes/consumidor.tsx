@@ -275,9 +275,8 @@ function ComoAjuda() {
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
             <p className="mt-8 leading-relaxed text-offwhite/80">
-              Antes de tomar qualquer decisão, é importante entender o contexto,
-              reunir documentos e avaliar se há caminhos administrativos ou
-              jurídicos possíveis.
+              A análise jurídica ajuda a organizar o caso e indicar os caminhos
+              possíveis com clareza e responsabilidade.
             </p>
             <ul className="mt-8 space-y-3">
               {ajuda.map((c) => (
@@ -292,8 +291,8 @@ function ComoAjuda() {
             <div className="h-full rounded-sm border-l-2 border-gold/70 bg-navy-deep/50 p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)]">
               <AlertTriangle className="h-7 w-7 text-gold" strokeWidth={1.25} />
               <p className="mt-6 font-display text-xl italic leading-relaxed text-offwhite/90">
-                "A atuação jurídica não representa promessa de resultado. A análise
-                é feita com base no caso concreto."
+                "A atuação jurídica não representa promessa de resultado. Cada
+                caso é analisado a partir dos fatos, documentos e provas disponíveis."
               </p>
             </div>
           </aside>
