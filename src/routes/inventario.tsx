@@ -422,11 +422,6 @@ function Authority() {
           <h2 className="mt-10 font-display text-3xl font-medium text-offwhite md:text-5xl">
             Organização, clareza e segurança na regularização patrimonial
           </h2>
-          <p className="mx-auto mt-8 max-w-xl leading-relaxed text-offwhite/80">
-            O inventário exige cuidado com prazos, documentos, bens e interesses
-            familiares. Uma condução responsável ajuda a tornar o processo mais claro
-            e organizado.
-          </p>
           <div className="mx-auto mt-10 h-px w-16 gold-divider" />
         </div>
       </div>
