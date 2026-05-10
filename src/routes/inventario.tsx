@@ -225,8 +225,9 @@ function Necessidade() {
             Quando o inventário é necessário?
           </h2>
           <p className="mt-5 text-offwhite/65">
-            O inventário costuma ser necessário quando há bens, direitos ou obrigações
-            deixadas por uma pessoa falecida.
+            O inventário é necessário quando uma pessoa falece deixando bens,
+            valores, direitos ou pendências que precisam ser regularizados e
+            transferidos aos herdeiros. Isso pode envolver, por exemplo:
           </p>
         </div>
 
