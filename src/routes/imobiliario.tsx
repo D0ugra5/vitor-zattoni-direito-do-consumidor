@@ -116,11 +116,9 @@ const documentos = [
 ];
 
 const faq = [
-  { q: "Preciso de advogado antes de comprar um imóvel?", a: "A orientação jurídica pode ser importante antes da compra para analisar documentos, contrato, matrícula, certidões e possíveis riscos da negociação." },
+  { q: "Por que contratar um advogado antes de comprar um imóvel?", a: "A orientação jurídica pode ser importante antes da compra para analisar documentos, contrato, matrícula, certidões e possíveis riscos da negociação." },
   { q: "O advogado pode analisar um contrato de locação?", a: "Sim. Contratos de locação podem ser analisados para esclarecer obrigações, garantias, reajustes, multas, prazos e responsabilidades das partes." },
-  { q: "O que verificar antes de assinar um contrato imobiliário?", a: "É importante avaliar as partes envolvidas, a documentação do imóvel, condições de pagamento, multas, prazos, obrigações e possíveis pendências." },
   { q: "Tenho problema com inquilino ou proprietário. Posso buscar orientação?", a: "Sim. Situações envolvendo locador, locatário, inadimplência, rescisão, garantias ou descumprimento contratual podem ser avaliadas juridicamente." },
-  { q: "O imóvel está irregular. O que fazer?", a: "A regularização depende da situação documental do imóvel. É necessário analisar matrícula, escritura, registros, posse e demais documentos relacionados." },
   { q: "O atendimento pode ser online?", a: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais." },
 ];
 
