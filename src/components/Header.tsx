@@ -44,9 +44,9 @@ export function Header({ transparentOnTop = false }: Props) {
           </span>
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="font-display text-sm font-medium tracking-wide text-offwhite">
-              Vitor Zattoni Advogado
+              Vitor Zattoni
             </span>
-            <span className="mt-0.5 text-[10px] uppercase tracking-[0.28em] text-gold/80">
+            <span className="mt-0.5 text-[8px] uppercase tracking-[0.28em] text-gold/80">
               Sociedade Individual de Advocacia
             </span>
           </span>
