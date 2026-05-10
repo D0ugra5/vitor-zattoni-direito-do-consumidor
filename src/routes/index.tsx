@@ -98,7 +98,7 @@ function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Header transparentOnTop />
       <Hero />
-      <Intro />
+      
       <Areas />
       <About />
       <Principles />
