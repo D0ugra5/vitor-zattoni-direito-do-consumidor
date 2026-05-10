@@ -170,7 +170,7 @@ function Hero() {
 
 function Intro() {
   return (
-    <section className="border-t border-gold/15 py-24 md:py-36">
+    <section className="border-t border-gold/15 bg-gradient-to-b from-navy-deep to-navy-mid py-24 md:py-36">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <span className="reveal text-xs uppercase tracking-[0.3em] text-gold">
           Posicionamento
