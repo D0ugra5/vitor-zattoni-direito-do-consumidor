@@ -192,15 +192,12 @@ function Intro() {
               O que é o inventário?
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
-            <p className="mt-8 leading-relaxed text-offwhite/80">
-              O inventário é o procedimento utilizado para identificar bens, direitos,
-              dívidas e herdeiros de uma pessoa falecida, permitindo a regularização e
-              a partilha do patrimônio conforme a legislação aplicável.
-            </p>
-            <p className="mt-5 leading-relaxed text-offwhite/70">
-              Esse processo pode ser realizado de forma judicial ou extrajudicial,
-              dependendo das características do caso, da existência de acordo entre os
-              herdeiros e dos requisitos legais.
+            <p className="mt-8 text-justify leading-relaxed text-offwhite/80">
+              O inventário é o procedimento necessário para organizar e regularizar
+              os bens deixados por uma pessoa falecida. Durante esse processo, são
+              identificados os herdeiros, os bens, as dívidas e os documentos
+              necessários para que a partilha seja feita de forma segura, seja em
+              cartório ou pela via judicial, conforme cada situação.
             </p>
           </div>
           <aside className="reveal md:col-span-2">
