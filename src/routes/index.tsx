@@ -266,7 +266,7 @@ function About() {
             </p>
 
             <dl className="mt-10 space-y-3 text-sm">
-              <Row label="OAB/UF" value="[inserir posteriormente]" />
+              <Row label="OAB/PR" value="125.654" />
               <Row label="Cidade/Estado" value="Quatro Barras - PR" />
               <Row label="Áreas" value="Imobiliário · Inventário · Consumidor" />
             </dl>
