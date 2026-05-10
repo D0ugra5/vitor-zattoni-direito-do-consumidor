@@ -42,8 +42,13 @@ export function Header({ transparentOnTop = false }: Props) {
           <span className="font-display text-2xl font-semibold tracking-wide text-gold">
             VZ
           </span>
-          <span className="hidden text-sm font-medium tracking-wide text-offwhite sm:inline">
-            Vitor Zattoni Advogado
+          <span className="hidden flex-col leading-tight sm:flex">
+            <span className="font-display text-sm font-medium tracking-wide text-offwhite">
+              Vitor Zattoni Advogado
+            </span>
+            <span className="mt-0.5 text-[10px] uppercase tracking-[0.28em] text-gold/80">
+              Sociedade Individual de Advocacia
+            </span>
           </span>
         </Link>
 
