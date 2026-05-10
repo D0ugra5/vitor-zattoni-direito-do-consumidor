@@ -72,12 +72,12 @@ function useReveal() {
 }
 
 const necessidades = [
-  { icon: HomeIcon, title: "Imóveis", text: "Quando existem casas, apartamentos, terrenos ou outros bens imóveis a serem regularizados ou partilhados." },
-  { icon: Car, title: "Veículos", text: "Quando há carros, motos ou outros veículos em nome da pessoa falecida." },
-  { icon: Landmark, title: "Contas bancárias e valores", text: "Quando existem valores em conta, investimentos, saldos, aplicações ou outros ativos financeiros." },
-  { icon: FileWarning, title: "Dívidas ou obrigações", text: "Quando é necessário avaliar débitos, financiamentos, obrigações ou responsabilidades patrimoniais." },
-  { icon: Users, title: "Herdeiros", text: "Quando é preciso identificar os herdeiros e organizar a partilha de acordo com o caso." },
-  { icon: FileCheck2, title: "Regularização patrimonial", text: "Quando a família precisa transferir bens, atualizar registros ou formalizar a situação patrimonial." },
+  { icon: HomeIcon, title: "Imóveis", text: "Casas, apartamentos e terrenos." },
+  { icon: Car, title: "Veículos", text: "Carros, motos e outros bens." },
+  { icon: Landmark, title: "Contas e valores", text: "Saldos, aplicações e investimentos." },
+  { icon: FileWarning, title: "Dívidas", text: "Débitos e obrigações deixadas." },
+  { icon: Users, title: "Herdeiros", text: "Identificação e organização da partilha." },
+  { icon: FileCheck2, title: "Regularização", text: "Transferência formal dos bens." },
 ];
 
 const etapas = [
