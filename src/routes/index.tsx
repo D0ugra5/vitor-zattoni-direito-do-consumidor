@@ -191,14 +191,15 @@ function Intro() {
 
 function Areas() {
   return (
-    <section id="areas" className="relative border-t border-gold/20 bg-ivory py-24 md:py-36">
+    <section id="areas" className="relative border-t border-gold/15 bg-navy-mid py-24 md:py-36">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-deep/60 to-transparent" />
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-gold">Atuação</span>
-          <h2 className="mt-6 font-display text-3xl font-medium text-navy-deep md:text-5xl">
+          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
             Áreas de atuação
           </h2>
-          <p className="mt-5 text-muted-ink">
+          <p className="mt-5 text-offwhite/65">
             Conheça as principais frentes de atuação jurídica.
           </p>
         </div>
@@ -207,7 +208,7 @@ function Areas() {
           {areas.map(({ to, icon: Icon, title, text }, i) => (
             <article
               key={title}
-              className="reveal group flex flex-col rounded-sm border border-gold/30 bg-white p-8 shadow-[0_8px_30px_-12px_rgba(11,22,40,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_18px_40px_-18px_rgba(201,163,92,0.35)]"
+              className="reveal group flex flex-col rounded-sm border border-gold/25 bg-ivory p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_20px_50px_-18px_rgba(201,163,92,0.35)]"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <Icon className="h-8 w-8 text-gold" strokeWidth={1.25} />
