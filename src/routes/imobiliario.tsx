@@ -274,16 +274,21 @@ function Analise() {
           <div className="reveal md:col-span-3">
             <span className="text-xs uppercase tracking-[0.3em] text-gold">Prevenção</span>
             <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
-              Por que analisar antes de assinar um contrato imobiliário?
+              Antes de comprar um imóvel, é preciso saber se ele está realmente seguro para venda
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
             <p className="mt-8 leading-relaxed text-offwhite/80">
-              Contratos imobiliários podem envolver valores altos, obrigações de longo
-              prazo e riscos que nem sempre são percebidos de imediato. Uma análise
-              jurídica prévia ajuda a compreender cláusulas, responsabilidades, prazos,
-              multas, garantias e possíveis consequências.
+              A compra de um imóvel envolve valores altos e não deve depender apenas da
+              confiança entre as partes. Antes de assinar qualquer contrato, é importante
+              verificar se existem pendências, dívidas, restrições ou problemas na
+              documentação que possam trazer prejuízos depois. Essa análise ajuda o
+              comprador a entender melhor a situação do imóvel e tomar uma decisão com
+              mais segurança.
             </p>
-            <ul className="mt-8 space-y-3">
+            <p className="mt-8 text-xs uppercase tracking-[0.25em] text-gold">
+              O que pode ser verificado
+            </p>
+            <ul className="mt-4 space-y-3">
               {cuidados.map((c) => (
                 <li key={c} className="flex items-start gap-3 text-sm text-offwhite/80">
                   <span className="mt-2 h-1 w-3 flex-shrink-0 bg-gold" />
