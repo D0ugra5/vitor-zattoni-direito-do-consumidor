@@ -1,25 +1,30 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   ShieldCheck,
-  Lock,
-  UserCheck,
-  MessageSquare,
   Receipt,
-  PackageX,
+  Landmark,
   Wifi,
-  CreditCard,
-  ShoppingBag,
+  PackageX,
+  FileSignature,
   AlertTriangle,
-  FileWarning,
-  PhoneOff,
-  Plus,
-  Minus,
+  MessageSquare,
+  Search,
+  ClipboardList,
+  ArrowRight,
+  FileText,
 } from "lucide-react";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { Footer } from "@/components/Footer";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import consumidorHero from "@/assets/consumidor-hero.jpg";
 
 export const Route = createFileRoute("/consumidor")({
   head: () => ({
@@ -28,18 +33,19 @@ export const Route = createFileRoute("/consumidor")({
       {
         name: "description",
         content:
-          "Receba orientação jurídica em Direito do Consumidor pelo WhatsApp. Atendimento sigiloso, online e individualizado com Vitor Zattoni Advogado.",
+          "Orientação jurídica em Direito do Consumidor: cobranças, contratos, bancos, operadoras, produtos e serviços. Atendimento sigiloso e individualizado.",
       },
       { property: "og:title", content: "Direito do Consumidor | Vitor Zattoni Advogado" },
       {
         property: "og:description",
         content:
-          "Orientação jurídica para problemas com operadora, banco, cobranças, contratos e serviços. Atendimento pelo WhatsApp.",
+          "Atuação em relações de consumo com análise responsável de contratos, cobranças e conflitos com empresas.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: consumidorHero },
     ],
   }),
-  component: Landing,
+  component: Page,
 });
 
 function useReveal() {
@@ -62,47 +68,68 @@ function useReveal() {
 }
 
 const seals = [
-  { icon: UserCheck, label: "Atendimento profissional" },
-  { icon: Lock, label: "Sigilo jurídico" },
-  { icon: ShieldCheck, label: "Análise individual do caso" },
-  { icon: MessageSquare, label: "Comunicação clara" },
+  "Atendimento sigiloso",
+  "Análise individual",
+  "Comunicação clara",
+  "Atuação responsável",
 ];
 
-const situations = [
-  { icon: Receipt, title: "Cobrança indevida", text: "Quando uma empresa cobra valores que você não reconhece ou que não foram contratados." },
-  { icon: PackageX, title: "Serviço não entregue", text: "Casos em que o serviço prometido não foi prestado corretamente ou não corresponde ao contratado." },
-  { icon: Wifi, title: "Problemas com operadora", text: "Situações com internet, telefone, plano de dados, cancelamentos, cobranças e falhas no atendimento." },
-  { icon: CreditCard, title: "Problemas com banco ou cartão", text: "Cobranças, bloqueios, contratos, tarifas, negativação ou uso indevido." },
-  { icon: ShoppingBag, title: "Produto não entregue ou com defeito", text: "Compras que não chegaram, produtos com problemas ou dificuldade para resolver com a empresa." },
-  { icon: AlertTriangle, title: "Negativação indevida", text: "Quando o nome é incluído em órgãos de proteção ao crédito de forma questionável ou sem clareza." },
-  { icon: FileWarning, title: "Contrato abusivo ou confuso", text: "Cláusulas difíceis de entender, obrigações desproporcionais ou dúvidas antes de assinar." },
-  { icon: PhoneOff, title: "Empresa que não resolve pelo SAC", text: "Quando o consumidor tenta resolver administrativamente, mas não recebe retorno adequado." },
+const situacoes = [
+  { icon: Receipt, title: "Cobranças indevidas", text: "Valores não reconhecidos, cobranças recorrentes, faturas divergentes ou débitos questionáveis." },
+  { icon: Landmark, title: "Problemas com bancos", text: "Contratos bancários, cartões, tarifas, bloqueios, cobranças, empréstimos ou movimentações não reconhecidas." },
+  { icon: Wifi, title: "Operadoras e serviços", text: "Problemas com internet, telefone, planos, cancelamentos, cobranças e falhas na prestação do serviço." },
+  { icon: PackageX, title: "Produto não entregue ou com defeito", text: "Compras que não chegaram, produtos com vício, divergência na oferta ou dificuldade de solução com a empresa." },
+  { icon: FileSignature, title: "Contratos de consumo", text: "Cláusulas, multas, cancelamentos, obrigações, reajustes e condições aplicadas ao consumidor." },
+  { icon: AlertTriangle, title: "Negativação e cadastros", text: "Inscrição em órgãos de proteção ao crédito, cobranças desconhecidas ou dúvidas sobre a origem do débito." },
 ];
 
-const steps = [
-  { n: "01", title: "Você envia uma mensagem", text: "Clique no botão de WhatsApp e informe brevemente o que aconteceu." },
-  { n: "02", title: "O caso é compreendido", text: "As informações iniciais são avaliadas para entender o contexto do problema." },
-  { n: "03", title: "Documentos podem ser solicitados", text: "Comprovantes, contratos, prints, protocolos e outros documentos podem ajudar na análise." },
-  { n: "04", title: "Você recebe orientação", text: "São explicados os caminhos possíveis, riscos, limites e próximos passos." },
+const ajuda = [
+  "Compreender o problema de forma organizada",
+  "Avaliar contratos, comprovantes e protocolos",
+  "Identificar riscos, limites e possibilidades",
+  "Orientar sobre documentos importantes",
+  "Explicar os próximos passos de maneira clara",
 ];
 
-const faqs = [
-  { q: "O primeiro contato garante que meu caso será aceito?", a: "Não. O primeiro contato serve para entender a situação e verificar se existe possibilidade de atuação jurídica." },
-  { q: "O advogado pode garantir resultado?", a: "Não. Nenhum resultado pode ser garantido. A atuação depende dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes." },
-  { q: "Quais documentos posso enviar pelo WhatsApp?", a: "Depende do caso. Em geral, contratos, comprovantes, prints, protocolos, notificações, boletos e documentos relacionados ao problema podem auxiliar na análise." },
-  { q: "O atendimento pode ser online?", a: "Sim. Quando adequado, o atendimento pode ser realizado por canais digitais." },
-  { q: "Tenho problema com uma empresa. Posso entrar em contato?", a: "Sim. Você pode relatar a situação para que seja feita uma análise inicial e, se houver possibilidade, receber orientação sobre os próximos passos." },
-  { q: "Meus dados ficam protegidos?", a: "Sim. As informações fornecidas são tratadas com sigilo profissional." },
+const etapas = [
+  { icon: MessageSquare, title: "Primeiro contato", text: "Você envia uma mensagem pelo WhatsApp explicando brevemente a situação." },
+  { icon: Search, title: "Levantamento inicial", text: "São avaliadas informações sobre a empresa envolvida, cobranças, contratos, protocolos e documentos." },
+  { icon: ClipboardList, title: "Análise do caso", text: "O contexto é analisado para verificar possibilidades, riscos, limites e próximos passos." },
+  { icon: ArrowRight, title: "Orientação", text: "São explicados os caminhos possíveis e, se houver viabilidade, a forma de atuação profissional." },
 ];
 
-function Landing() {
+const documentos = [
+  "Contratos",
+  "Comprovantes de pagamento",
+  "Boletos, faturas ou extratos",
+  "Prints de conversas",
+  "Protocolos de atendimento",
+  "E-mails ou notificações",
+  "Comprovantes de compra",
+  "Prints de oferta ou anúncio",
+  "Comprovante de negativação, se houver",
+];
+
+const faq = [
+  { q: "Todo problema com empresa gera direito a indenização?", a: "Não. Cada situação precisa ser analisada individualmente, considerando fatos, documentos, provas e legislação aplicável." },
+  { q: "Preciso ter protocolos de atendimento?", a: "Protocolos, mensagens, e-mails e comprovantes podem ajudar na análise, mas os documentos necessários dependem do caso." },
+  { q: "Problemas com banco podem ser avaliados?", a: "Sim. Situações envolvendo cobranças, contratos, cartões, tarifas, bloqueios e outras questões bancárias podem ser analisadas." },
+  { q: "Problemas com operadora podem ser avaliados?", a: "Sim. Questões envolvendo internet, telefone, planos, cancelamentos, cobranças e falhas no serviço podem ser analisadas." },
+  { q: "O atendimento pode ser online?", a: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais." },
+  { q: "O advogado pode garantir resultado?", a: "Não. Nenhum resultado pode ser garantido. A atuação depende da análise dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes." },
+];
+
+function Page() {
   useReveal();
   return (
-    <div id="top" className="min-h-screen bg-background text-foreground">
-      <Header />
+    <div className="min-h-screen bg-background text-foreground">
+      <Header transparentOnTop />
       <Hero />
-      <Situations />
-      <HowItWorks />
+      <Intro />
+      <Situacoes />
+      <ComoAjuda />
+      <ComoFunciona />
+      <Documentos />
       <FAQ />
       <FinalCTA />
       <Footer />
@@ -113,42 +140,57 @@ function Landing() {
 
 function Hero() {
   return (
-    <section className="bg-hero-gradient relative overflow-hidden">
-      <div className="pointer-events-none absolute -right-20 top-10 h-80 w-80 rounded-full border border-gold/15" />
-      <div className="pointer-events-none absolute -right-40 top-32 h-96 w-96 rounded-full border border-gold/10" />
-      <div className="pointer-events-none absolute left-10 bottom-10 h-px w-40 gold-divider" />
+    <section className="relative isolate min-h-[100svh] overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src={consumidorHero}
+          alt="Documento de contrato de consumo elegante sobre mesa de mármore escuro com caneta dourada"
+          className="h-full w-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy-deep/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-navy-deep/30" />
+      </div>
 
-      <div className="mx-auto max-w-5xl px-5 py-20 md:py-28">
-        <div className="reveal">
-          <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-3 py-1 text-xs uppercase tracking-[0.2em] text-gold">
+      <div className="pointer-events-none absolute left-10 top-1/2 hidden h-40 w-px gold-divider rotate-90 md:block" />
+      <div className="pointer-events-none absolute right-10 bottom-20 h-px w-32 gold-divider" />
+
+      <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 py-32 md:py-40">
+        <div className="reveal max-w-3xl">
+          <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-gold">
+            <span className="h-px w-8 bg-gold" />
             Direito do Consumidor
           </span>
-          <h1 className="mt-6 font-display text-4xl font-medium leading-[1.05] text-offwhite md:text-6xl">
-            Teve problema com operadora, banco ou empresa?
+          <h1 className="mt-8 font-display text-5xl font-medium leading-[1.05] text-offwhite md:text-7xl">
+            Problemas em relações de consumo exigem orientação clara e responsável
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-offwhite/75 md:text-xl">
-            Receba orientação jurídica para entender seus direitos, avaliar seu caso e
-            identificar os próximos passos possíveis.
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
+            Atuação em casos envolvendo cobranças, contratos, bancos, operadoras,
+            produtos, serviços e conflitos com empresas.
           </p>
-          <p className="mt-3 text-sm text-offwhite/55">
-            Atendimento sigiloso, online e individualizado.
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-offwhite/55">
+            Uma análise jurídica cuidadosa ajuda a compreender a situação, organizar
+            documentos e identificar os caminhos possíveis conforme o caso concreto.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <WhatsAppButton size="lg">Falar com um advogado no WhatsApp</WhatsAppButton>
+          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+            <WhatsAppButton size="lg" variant="primary" withIcon={false}>
+              Solicitar orientação
+            </WhatsAppButton>
             <a
-              href="#como-funciona"
-              className="inline-flex items-center justify-center rounded-md border border-gold/60 px-7 py-4 text-base font-medium text-offwhite transition-all hover:border-gold hover:bg-gold/10"
+              href="#situacoes"
+              className="inline-flex items-center justify-center gap-2 rounded-sm border border-gold/60 px-7 py-4 text-xs uppercase tracking-[0.2em] text-offwhite transition-all hover:border-gold hover:bg-gold/10"
             >
-              Ver como funciona o atendimento
+              Ver situações atendidas
             </a>
           </div>
 
-          <ul className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {seals.map(({ icon: Icon, label }) => (
-              <li key={label} className="flex items-center gap-2 text-sm text-offwhite/80">
-                <Icon className="h-4 w-4 text-gold" strokeWidth={1.5} />
-                {label}
+          <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-3">
+            {seals.map((s) => (
+              <li key={s} className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-offwhite/65">
+                <ShieldCheck className="h-3.5 w-3.5 text-gold" strokeWidth={1.5} />
+                {s}
               </li>
             ))}
           </ul>
@@ -158,125 +200,232 @@ function Hero() {
   );
 }
 
-function Situations() {
+function Intro() {
   return (
-    <section className="border-t border-gold/15 py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-5">
-        <div className="reveal mx-auto max-w-3xl text-center">
-          <h2 className="font-display text-3xl font-medium text-offwhite md:text-5xl">
-            Você está passando por alguma dessas situações?
-          </h2>
-          <p className="mt-4 text-offwhite/70">
-            Uma orientação jurídica adequada ajuda a entender quais caminhos podem ser avaliados.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {situations.map(({ icon: Icon, title, text }, i) => (
-            <div
-              key={title}
-              className="card-gold reveal rounded-lg p-6"
-              style={{ transitionDelay: `${i * 60}ms` }}
-            >
-              <Icon className="h-7 w-7 text-gold" strokeWidth={1.4} />
-              <h3 className="mt-5 font-display text-xl text-offwhite">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-offwhite/70">{text}</p>
+    <section className="relative border-t border-gold/15 bg-gradient-to-b from-navy-deep to-navy-mid py-24 md:py-32">
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-px flex justify-center">
+        <div className="h-px w-40 gold-divider md:w-64" />
+      </div>
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="grid gap-12 md:grid-cols-5 md:gap-16">
+          <div className="reveal md:col-span-3">
+            <span className="text-xs uppercase tracking-[0.3em] text-gold">Visão geral</span>
+            <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
+              Relações de consumo podem envolver dúvidas, prejuízos e insegurança
+            </h2>
+            <div className="mt-6 h-px w-16 gold-divider" />
+            <p className="mt-8 leading-relaxed text-offwhite/80">
+              Problemas com empresas, bancos, operadoras, produtos, serviços ou
+              contratos podem gerar dúvidas sobre quais medidas são possíveis. A
+              orientação jurídica contribui para avaliar documentos, compreender
+              direitos e indicar os próximos passos de forma responsável.
+            </p>
+          </div>
+          <aside className="reveal md:col-span-2">
+            <div className="h-full rounded-sm border-l-2 border-gold/70 bg-navy-deep/50 p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)]">
+              <span className="text-xs uppercase tracking-[0.3em] text-gold">Observação</span>
+              <p className="mt-5 font-display text-xl italic leading-relaxed text-offwhite/90">
+                "Cada caso depende da análise dos fatos, documentos, provas e
+                legislação aplicável."
+              </p>
             </div>
-          ))}
-        </div>
-
-        <div className="reveal mt-12 flex justify-center">
-          <WhatsAppButton size="lg">Quero orientação pelo WhatsApp</WhatsAppButton>
+          </aside>
         </div>
       </div>
     </section>
   );
 }
 
-function HowItWorks() {
+function Situacoes() {
   return (
-    <section id="como-funciona" className="border-t border-gold/15 bg-navy/40 py-20 md:py-28">
-      <div className="mx-auto max-w-4xl px-5">
-        <div className="reveal text-center">
-          <h2 className="font-display text-3xl font-medium text-offwhite md:text-5xl">
-            Como funciona o atendimento pelo WhatsApp
+    <section id="situacoes" className="relative border-t border-gold/15 bg-navy-mid py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="reveal mx-auto max-w-2xl text-center">
+          <span className="text-xs uppercase tracking-[0.3em] text-gold">Situações atendidas</span>
+          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
+            Situações que podem ser analisadas
           </h2>
-          <p className="mt-4 text-offwhite/70">
-            O processo é simples, sigiloso e conduzido com responsabilidade.
+          <p className="mt-5 text-offwhite/65">
+            Conheça alguns exemplos de problemas em relações de consumo que podem
+            exigir orientação jurídica.
           </p>
         </div>
 
-        <ol className="relative mt-14 space-y-10 before:absolute before:left-[19px] before:top-2 before:h-[calc(100%-2rem)] before:w-px before:bg-gold/40 md:before:left-6">
-          {steps.map((s) => (
-            <li key={s.n} className="reveal relative flex gap-5 pl-0 md:gap-7">
-              <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold bg-navy-deep font-display text-sm text-gold md:h-12 md:w-12 md:text-base">
-                {s.n}
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {situacoes.map(({ icon: Icon, title, text }, i) => (
+            <article
+              key={title}
+              className="reveal group flex flex-col rounded-sm border border-gold/25 bg-navy-deep/60 p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_20px_50px_-18px_rgba(201,163,92,0.35)]"
+              style={{ transitionDelay: `${i * 60}ms` }}
+            >
+              <Icon className="h-8 w-8 text-gold" strokeWidth={1.25} />
+              <div className="mt-6 h-px w-12 bg-gold/60 transition-all duration-300 group-hover:w-20" />
+              <h3 className="mt-6 font-display text-2xl text-offwhite">{title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-offwhite/70">{text}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="reveal mt-16 flex justify-center">
+          <WhatsAppButton size="lg" withIcon={false}>
+            Falar sobre meu caso
+          </WhatsAppButton>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ComoAjuda() {
+  return (
+    <section className="relative border-t border-gold/15 bg-gradient-to-b from-navy-mid to-navy-deep py-24 md:py-32">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="grid gap-12 md:grid-cols-5 md:gap-16">
+          <div className="reveal md:col-span-3">
+            <span className="text-xs uppercase tracking-[0.3em] text-gold">Orientação</span>
+            <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
+              Como a orientação jurídica pode ajudar
+            </h2>
+            <div className="mt-6 h-px w-16 gold-divider" />
+            <p className="mt-8 leading-relaxed text-offwhite/80">
+              Antes de tomar qualquer decisão, é importante entender o contexto,
+              reunir documentos e avaliar se há caminhos administrativos ou
+              jurídicos possíveis.
+            </p>
+            <ul className="mt-8 space-y-3">
+              {ajuda.map((c) => (
+                <li key={c} className="flex items-start gap-3 text-sm text-offwhite/80">
+                  <span className="mt-2 h-1 w-3 flex-shrink-0 bg-gold" />
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <aside className="reveal md:col-span-2">
+            <div className="h-full rounded-sm border-l-2 border-gold/70 bg-navy-deep/50 p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)]">
+              <AlertTriangle className="h-7 w-7 text-gold" strokeWidth={1.25} />
+              <p className="mt-6 font-display text-xl italic leading-relaxed text-offwhite/90">
+                "A atuação jurídica não representa promessa de resultado. A análise
+                é feita com base no caso concreto."
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ComoFunciona() {
+  return (
+    <section className="relative border-t border-gold/15 bg-navy-deep py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="reveal mx-auto max-w-2xl text-center">
+          <span className="text-xs uppercase tracking-[0.3em] text-gold">Atendimento</span>
+          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
+            Como funciona o atendimento
+          </h2>
+        </div>
+
+        <div className="relative mt-16">
+          <div aria-hidden className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gold/20 md:block" />
+          <div className="grid gap-8 md:grid-cols-2 md:gap-12">
+            {etapas.map(({ icon: Icon, title, text }, i) => (
+              <div
+                key={title}
+                className={`reveal relative rounded-sm border border-gold/25 bg-navy-mid/60 p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)] ${
+                  i % 2 === 1 ? "md:translate-y-12" : ""
+                }`}
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <div className="flex items-center gap-4">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/60 font-display text-lg text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <Icon className="h-6 w-6 text-gold" strokeWidth={1.25} />
+                </div>
+                <h3 className="mt-6 font-display text-2xl text-offwhite">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-offwhite/75">{text}</p>
               </div>
-              <div className="pt-1">
-                <h3 className="font-display text-2xl text-offwhite">{s.title}</h3>
-                <p className="mt-1.5 text-offwhite/70">{s.text}</p>
-              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="reveal mt-20 flex justify-center">
+          <WhatsAppButton size="lg" withIcon={false}>
+            Solicitar orientação
+          </WhatsAppButton>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Documentos() {
+  return (
+    <section className="relative border-t border-gold/15 bg-navy-mid py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="reveal mx-auto max-w-2xl text-center">
+          <span className="text-xs uppercase tracking-[0.3em] text-gold">Documentação</span>
+          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
+            Documentos que podem auxiliar na análise
+          </h2>
+          <p className="mt-5 text-offwhite/65">
+            A documentação varia conforme o caso, mas alguns registros costumam ser
+            úteis.
+          </p>
+        </div>
+
+        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {documentos.map((doc, i) => (
+            <li
+              key={doc}
+              className="reveal flex items-start gap-4 rounded-sm border border-gold/20 bg-navy-deep/55 p-5 transition-all hover:border-gold/60"
+              style={{ transitionDelay: `${i * 40}ms` }}
+            >
+              <FileText className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold" strokeWidth={1.25} />
+              <span className="text-sm leading-relaxed text-offwhite/85">{doc}</span>
             </li>
           ))}
-        </ol>
+        </ul>
 
-        <p className="reveal mt-12 text-center text-sm italic text-offwhite/55">
-          O atendimento não representa promessa de resultado. Cada caso depende da análise
-          individual dos fatos, documentos e legislação aplicável.
+        <p className="reveal mx-auto mt-10 max-w-2xl text-center text-sm italic text-offwhite/60">
+          A lista pode variar conforme a situação. O atendimento ajuda a identificar
+          quais documentos são relevantes para o caso.
         </p>
-
-        <div className="reveal mt-8 flex justify-center">
-          <WhatsAppButton size="lg">Começar atendimento pelo WhatsApp</WhatsAppButton>
-        </div>
       </div>
     </section>
   );
 }
 
 function FAQ() {
-  const [open, setOpen] = useState<number | null>(0);
   return (
-    <section className="border-t border-gold/15 bg-navy/40 py-20 md:py-28">
-      <div className="mx-auto max-w-3xl px-5">
+    <section className="relative border-t border-gold/15 bg-gradient-to-b from-navy-deep to-navy-mid py-24 md:py-32">
+      <div className="mx-auto max-w-3xl px-6">
         <div className="reveal text-center">
-          <h2 className="font-display text-3xl font-medium text-offwhite md:text-5xl">
+          <span className="text-xs uppercase tracking-[0.3em] text-gold">Dúvidas</span>
+          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
             Dúvidas frequentes
           </h2>
+          <div className="mx-auto mt-6 h-px w-16 gold-divider" />
         </div>
 
-        <div className="mt-12 space-y-3">
-          {faqs.map((f, i) => {
-            const isOpen = open === i;
-            return (
-              <div
-                key={f.q}
-                className="reveal overflow-hidden rounded-lg border border-gold/30 bg-navy/60 transition-colors hover:border-gold/60"
-              >
-                <button
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  aria-expanded={isOpen}
-                >
-                  <span className="font-display text-lg text-offwhite">{f.q}</span>
-                  {isOpen ? (
-                    <Minus className="h-5 w-5 shrink-0 text-gold" strokeWidth={1.5} />
-                  ) : (
-                    <Plus className="h-5 w-5 shrink-0 text-gold" strokeWidth={1.5} />
-                  )}
-                </button>
-                <div
-                  className={`grid transition-all duration-300 ${
-                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <p className="px-5 pb-5 text-offwhite/75">{f.a}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <Accordion type="single" collapsible className="reveal mt-12 space-y-3">
+          {faq.map((item, i) => (
+            <AccordionItem
+              key={item.q}
+              value={`item-${i}`}
+              className="rounded-sm border border-gold/25 bg-navy-deep/60 px-6"
+            >
+              <AccordionTrigger className="py-5 text-left font-display text-lg text-offwhite hover:text-gold hover:no-underline">
+                {item.q}
+              </AccordionTrigger>
+              <AccordionContent className="pb-6 text-sm leading-relaxed text-offwhite/75">
+                {item.a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );
@@ -284,20 +433,22 @@ function FAQ() {
 
 function FinalCTA() {
   return (
-    <section className="border-t border-gold/60 py-24 md:py-32">
-      <div className="mx-auto max-w-3xl px-5 text-center">
-        <h2 className="reveal font-display text-3xl font-medium text-offwhite md:text-5xl">
-          Teve um problema e precisa entender seus direitos?
+    <section id="contato" className="border-t border-gold/15 py-24 md:py-32">
+      <div className="mx-auto max-w-2xl px-6 text-center">
+        <span className="reveal text-xs uppercase tracking-[0.3em] text-gold">Contato</span>
+        <h2 className="reveal mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
+          Precisa entender melhor sua situação?
         </h2>
-        <p className="reveal mt-5 text-offwhite/75">
-          Entre em contato pelo WhatsApp e receba orientação jurídica para avaliar os
-          próximos passos possíveis.
+        <div className="reveal mx-auto mt-6 h-px w-16 gold-divider" />
+        <p className="reveal mx-auto mt-8 max-w-md leading-relaxed text-offwhite/75">
+          Entre em contato pelo WhatsApp e explique brevemente o ocorrido para uma
+          análise inicial.
         </p>
         <div className="reveal mt-10 flex justify-center">
-          <WhatsAppButton size="lg">Falar agora pelo WhatsApp</WhatsAppButton>
+          <WhatsAppButton size="lg">Enviar mensagem</WhatsAppButton>
         </div>
-        <p className="reveal mt-4 text-xs text-offwhite/55">
-          Envie uma breve descrição do que aconteceu para facilitar o atendimento.
+        <p className="reveal mt-6 text-xs italic text-offwhite/55">
+          Atendimento sigiloso, individualizado e profissional.
         </p>
       </div>
     </section>
