@@ -206,19 +206,16 @@ function Intro() {
           <div className="reveal md:col-span-3">
             <span className="text-xs uppercase tracking-[0.3em] text-gold">Visão geral</span>
             <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
-              Orientação jurídica para decisões imobiliárias mais seguras
+              Segurança antes da assinatura, durante a negociação e na regularização do imóvel
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
             <p className="mt-8 leading-relaxed text-offwhite/80">
-              Questões envolvendo imóveis exigem atenção a documentos, contratos,
-              prazos, registros e responsabilidades das partes. Uma análise jurídica
-              adequada pode ajudar a identificar riscos, esclarecer dúvidas e orientar
-              a condução de cada situação.
-            </p>
-            <p className="mt-5 leading-relaxed text-offwhite/70">
-              A atuação em Direito Imobiliário envolve tanto medidas preventivas, como
-              análise de contratos e documentos, quanto orientação em conflitos já
-              existentes.
+              Questões imobiliárias envolvem documentos, registros, contratos, prazos e
+              responsabilidades que nem sempre aparecem de forma clara para quem está
+              comprando, vendendo, alugando ou regularizando um imóvel. A atuação
+              jurídica permite avaliar riscos, revisar documentos, orientar negociações
+              e indicar os caminhos adequados para que cada decisão seja tomada com
+              mais segurança.
             </p>
           </div>
           <aside className="reveal md:col-span-2">
