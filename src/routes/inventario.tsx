@@ -150,11 +150,11 @@ function Hero() {
             Inventário e Sucessão
           </span>
           <h1 className="mt-8 font-display text-5xl font-medium leading-[1.05] text-offwhite md:text-7xl">
-            Orientação jurídica para inventários com clareza e responsabilidade
+            Inventário com clareza, segurança e responsabilidade
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
-            Atuação em inventários, partilha de bens, regularização patrimonial e
-            orientação para famílias em processos de sucessão.
+            Atuação em inventários judiciais e extrajudiciais, partilha de bens,
+            regularização de imóveis e organização da documentação necessária.
           </p>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-offwhite/55">
             Um atendimento cuidadoso para compreender o cenário, organizar documentos
