@@ -87,7 +87,7 @@ const areas = [
 
 const principles = [
   { icon: Eye, title: "Clareza", text: "Comunicação objetiva." },
-  { icon: ShieldCheck, title: "Comprometimento", text: "Análise cuidadosa e atuação baseada no caso concreto." },
+  { icon: ShieldCheck, title: "Comprometimento", text: "Análise cuidadosa." },
   { icon: Lock, title: "Sigilo", text: "Tratamento profissional e reservado das informações apresentadas." },
   { icon: Compass, title: "Credibilidade", text: "Orientação jurídica considerando riscos, possibilidades e próximos passos." },
 ];
