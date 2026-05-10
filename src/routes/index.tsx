@@ -235,11 +235,11 @@ function About() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-16 md:grid-cols-2">
           <div className="reveal relative">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-gold/40">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm border border-gold/40 bg-navy-deep">
               <img
                 src={aboutImage}
                 alt="Vitor Zattoni, advogado"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
                 loading="lazy"
                 width={1024}
                 height={1280}
