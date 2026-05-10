@@ -258,9 +258,11 @@ function About() {
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
             <p className="mt-8 leading-relaxed text-offwhite/75">
-              Atuação jurídica com postura ética, atenção individualizada e compromisso
-              com uma comunicação clara. Cada caso é analisado com responsabilidade,
-              considerando seus fatos, documentos e particularidades.
+              Advogado formado pela PUCPR, com experiência acadêmica internacional em
+              Direito Internacional e Europeu pela University of Silesia, na Polônia.
+              Possui MBA em Gestão e Business Law pela FGV e pós-graduação em Direito
+              Tributário pela PUCRS. Atua de forma técnica e com atenção às
+              particularidades de cada caso.
             </p>
 
             <dl className="mt-10 space-y-3 text-sm">
