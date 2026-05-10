@@ -142,10 +142,6 @@ function Hero() {
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
             Atuação em Direito Imobiliário, Inventário e Direito do Consumidor.
           </p>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-offwhite/55">
-            Uma abordagem profissional voltada à análise cuidadosa, segurança jurídica e
-            condução responsável de cada caso.
-          </p>
 
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
             <a
