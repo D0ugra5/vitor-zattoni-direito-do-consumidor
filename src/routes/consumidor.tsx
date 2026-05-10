@@ -200,7 +200,7 @@ function Intro() {
               Quando uma empresa falha, o consumidor não precisa lidar com tudo sozinho
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
-            <p className="mt-8 leading-relaxed text-offwhite/80">
+            <p className="mt-8 text-justify leading-relaxed text-offwhite/80">
               Cobranças indevidas, serviços não prestados, produtos com defeito,
               contratos abusivos e negativações podem trazer prejuízos financeiros
               e transtornos ao consumidor. A análise jurídica permite compreender o
