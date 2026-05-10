@@ -173,12 +173,9 @@ function Hero() {
             Segurança jurídica para comprar, vender, alugar ou regularizar imóveis
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
-            Atuação em compra e venda, locação, regularização de imóveis, análise
-            documental, contratos e conflitos imobiliários.
-          </p>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-offwhite/55">
-            Uma orientação cuidadosa ajuda a reduzir riscos, compreender obrigações
-            e tomar decisões mais seguras em questões imobiliárias.
+            Atuação em contratos imobiliários, locações, análise documental,
+            regularização de imóveis e questões relacionadas à matrícula, posse e
+            propriedade.
           </p>
 
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
