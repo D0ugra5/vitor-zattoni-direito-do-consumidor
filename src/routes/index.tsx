@@ -134,7 +134,7 @@ function Hero() {
         <div className="reveal max-w-3xl">
           <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-gold">
             <span className="h-px w-8 bg-gold" />
-            Vitor Zattoni Advogado
+            Vitor Zattoni
           </span>
           <h1 className="mt-8 font-display text-5xl font-medium leading-[1.05] text-offwhite md:text-7xl">
             Atuação com ética e responsabilidade
