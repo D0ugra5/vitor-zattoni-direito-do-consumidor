@@ -85,10 +85,10 @@ const situacoes = [
 
 const ajuda = [
   "Compreender o problema de forma organizada",
-  "Avaliar contratos, comprovantes e protocolos",
-  "Identificar riscos, limites e possibilidades",
-  "Orientar sobre documentos importantes",
-  "Explicar os próximos passos de maneira clara",
+  "Avaliar contratos, comprovantes, protocolos e conversas",
+  "Verificar se houve cobrança indevida, falha ou prejuízo",
+  "Identificar documentos importantes para o caso",
+  "Orientar os próximos passos de forma clara",
 ];
 
 const etapas = [
