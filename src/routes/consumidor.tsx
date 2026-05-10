@@ -164,12 +164,9 @@ function Hero() {
             Problemas em relações de consumo exigem orientação clara e responsável
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
-            Atuação em casos envolvendo cobranças, contratos, bancos, operadoras,
-            produtos, serviços e conflitos com empresas.
-          </p>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-offwhite/55">
-            Uma análise jurídica cuidadosa ajuda a compreender a situação, organizar
-            documentos e identificar os caminhos possíveis conforme o caso concreto.
+            Atuação em conflitos envolvendo cobranças indevidas, serviços não
+            prestados, produtos com defeito, contratos abusivos, bancos, operadoras
+            e negativações.
           </p>
 
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
@@ -183,15 +180,6 @@ function Hero() {
               Ver situações atendidas
             </a>
           </div>
-
-          <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-3">
-            {seals.map((s) => (
-              <li key={s} className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-offwhite/65">
-                <ShieldCheck className="h-3.5 w-3.5 text-gold" strokeWidth={1.5} />
-                {s}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>
