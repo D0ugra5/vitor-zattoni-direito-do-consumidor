@@ -73,7 +73,7 @@ const atuacao = [
   { icon: KeyRound, title: "Locação", text: "Orientação em contratos de aluguel, garantias, reajustes, inadimplência, rescisão, direitos e deveres de locador e locatário." },
   { icon: ClipboardCheck, title: "Regularização de imóveis", text: "Apoio na análise de pendências documentais, registros, escrituras, matrícula, posse e situações que exigem regularização patrimonial." },
   { icon: Scale, title: "Conflitos imobiliários", text: "Orientação em disputas envolvendo imóveis, descumprimento contratual, posse, uso do bem, cobranças ou divergências entre as partes." },
-  { icon: Search, title: "Análise documental", text: "Verificação de matrícula, escritura, certidões, contratos, dados das partes e demais documentos relevantes para a segurança da operação." },
+  { icon: Search, title: "Pesquisa de ônus do imóvel", text: "Verificação de matrícula, restrições, pendências, dívidas e riscos que possam comprometer a compra do imóvel." },
 ];
 
 const situacoes = [
