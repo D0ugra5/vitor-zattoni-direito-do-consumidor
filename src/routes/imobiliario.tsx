@@ -170,7 +170,7 @@ function Hero() {
             Direito Imobiliário
           </span>
           <h1 className="mt-8 font-display text-5xl font-medium leading-[1.05] text-offwhite md:text-7xl">
-            Segurança jurídica em contratos, imóveis e negociações imobiliárias
+            Segurança jurídica para comprar, vender, alugar ou regularizar imóveis
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
             Atuação em compra e venda, locação, regularização de imóveis, análise
