@@ -47,8 +47,8 @@
   --radius: 0.5rem;
 
   /* Brand palette */
-  --navy-deep: oklch(0.20 0.04 255);   /* #0B1628 */
-  --navy-mid: oklch(0.23 0.042 255);    /* quebra sutil entre seções */
+  --navy-deep: oklch(0.17 0.035 250);  /* #071827 — hero profundo */
+  --navy-mid: oklch(0.245 0.045 250);  /* #12304A — seção secundária */
   --navy: oklch(0.26 0.045 255);
   --navy-light: oklch(0.32 0.04 255);
   --gold: oklch(0.76 0.10 80);          /* #C9A96E */
