@@ -248,11 +248,11 @@ function About() {
           </div>
 
           <div className="reveal">
-            <span className="text-xs uppercase tracking-[0.3em] text-gold">Sobre</span>
+            <span className="block text-center text-xs uppercase tracking-[0.3em] text-gold">Sobre</span>
             <h2 className="mt-6 text-center font-display text-3xl font-medium text-offwhite md:text-5xl">
               Vitor Zattoni
             </h2>
-            <div className="mt-6 h-px w-16 gold-divider" />
+            <div className="mx-auto mt-6 h-px w-16 gold-divider" />
             <p className="mt-8 indent-8 text-justify leading-relaxed text-offwhite/75">
               Advogado formado pela PUCPR, com experiência acadêmica internacional em
               Direito Internacional e Europeu pela University of Silesia, na Polônia.
