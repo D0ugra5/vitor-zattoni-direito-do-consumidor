@@ -67,21 +67,21 @@ const areas = [
     icon: Building2,
     title: "Direito Imobiliário",
     text:
-      "Orientação em contratos, locação, compra e venda, regularização de imóveis, análise documental e questões relacionadas a bens imóveis.",
+      "Atuação em contratos, locações, compra e venda, regularização de imóveis e solução de conflitos envolvendo bens imobiliários.",
   },
   {
     to: "/inventario" as const,
     icon: Scale,
     title: "Inventário",
     text:
-      "Atuação em inventários, partilha de bens, sucessão patrimonial e regularização de questões familiares e hereditárias.",
+      "Atuação em inventários judiciais e extrajudiciais, partilha de bens, regularização patrimonial e orientação em questões sucessórias.",
   },
   {
     to: "/consumidor" as const,
     icon: ShoppingBag,
     title: "Direito do Consumidor",
     text:
-      "Orientação em relações de consumo, contratos, cobranças, produtos, serviços e questões envolvendo empresas e consumidores.",
+      "Atuação em conflitos de consumo, cobranças indevidas, falhas na prestação de serviços, produtos com defeito e práticas abusivas.",
   },
 ];
 
