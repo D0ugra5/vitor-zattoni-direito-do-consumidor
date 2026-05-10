@@ -88,11 +88,11 @@ const situacoes = [
 ];
 
 const cuidados = [
-  "Verificar se o imóvel possui pendências documentais",
-  "Compreender as obrigações assumidas no contrato",
-  "Avaliar riscos antes da assinatura",
-  "Identificar cláusulas confusas ou desproporcionais",
-  "Reduzir insegurança na negociação",
+  "Se o imóvel possui dívidas ou restrições",
+  "Se há pendências na matrícula",
+  "Se existem problemas envolvendo o proprietário",
+  "Se a documentação está coerente com a negociação",
+  "Se há riscos que possam dificultar a transferência",
 ];
 
 const etapas = [
