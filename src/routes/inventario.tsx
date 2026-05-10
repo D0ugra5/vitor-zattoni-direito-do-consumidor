@@ -155,10 +155,6 @@ function Hero() {
             Atuação em inventários judiciais e extrajudiciais, partilha de bens,
             regularização de imóveis e organização da documentação necessária.
           </p>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-offwhite/55">
-            Um atendimento cuidadoso para compreender o cenário, organizar documentos
-            e indicar os caminhos possíveis com segurança.
-          </p>
 
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
             <WhatsAppButton size="lg" variant="primary" withIcon={false}>
