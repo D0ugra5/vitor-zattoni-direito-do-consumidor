@@ -72,12 +72,12 @@ function useReveal() {
 }
 
 const necessidades = [
-  { icon: HomeIcon, title: "Imóveis", text: "Quando existem casas, apartamentos, terrenos ou outros bens imóveis a serem regularizados ou partilhados." },
-  { icon: Car, title: "Veículos", text: "Quando há carros, motos ou outros veículos em nome da pessoa falecida." },
-  { icon: Landmark, title: "Contas bancárias e valores", text: "Quando existem valores em conta, investimentos, saldos, aplicações ou outros ativos financeiros." },
-  { icon: FileWarning, title: "Dívidas ou obrigações", text: "Quando é necessário avaliar débitos, financiamentos, obrigações ou responsabilidades patrimoniais." },
-  { icon: Users, title: "Herdeiros", text: "Quando é preciso identificar os herdeiros e organizar a partilha de acordo com o caso." },
-  { icon: FileCheck2, title: "Regularização patrimonial", text: "Quando a família precisa transferir bens, atualizar registros ou formalizar a situação patrimonial." },
+  { icon: HomeIcon, title: "Imóveis", text: "Casas, apartamentos e terrenos." },
+  { icon: Car, title: "Veículos", text: "Carros, motos e outros bens." },
+  { icon: Landmark, title: "Contas e valores", text: "Saldos, aplicações e investimentos." },
+  { icon: FileWarning, title: "Dívidas", text: "Débitos e obrigações deixadas." },
+  { icon: Users, title: "Herdeiros", text: "Identificação e organização da partilha." },
+  { icon: FileCheck2, title: "Regularização", text: "Transferência formal dos bens." },
 ];
 
 const etapas = [
@@ -231,7 +231,7 @@ function Necessidade() {
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {necessidades.map(({ icon: Icon, title }, i) => (
+          {necessidades.map(({ icon: Icon, title, text }, i) => (
             <article
               key={title}
               className="reveal group flex flex-col items-center rounded-sm border border-gold/25 bg-navy-deep/60 p-8 text-center shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_20px_50px_-18px_rgba(201,163,92,0.35)]"
@@ -240,6 +240,7 @@ function Necessidade() {
               <Icon className="h-8 w-8 text-gold" strokeWidth={1.25} />
               <div className="mt-6 h-px w-12 bg-gold/60 transition-all duration-300 group-hover:w-20" />
               <h3 className="mt-6 font-display text-2xl text-offwhite">{title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-offwhite/70">{text}</p>
             </article>
           ))}
         </div>
