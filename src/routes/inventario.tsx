@@ -231,16 +231,15 @@ function Necessidade() {
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {necessidades.map(({ icon: Icon, title, text }, i) => (
+          {necessidades.map(({ icon: Icon, title }, i) => (
             <article
               key={title}
-              className="reveal group flex flex-col rounded-sm border border-gold/25 bg-navy-deep/60 p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_20px_50px_-18px_rgba(201,163,92,0.35)]"
+              className="reveal group flex flex-col items-center rounded-sm border border-gold/25 bg-navy-deep/60 p-8 text-center shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_20px_50px_-18px_rgba(201,163,92,0.35)]"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <Icon className="h-8 w-8 text-gold" strokeWidth={1.25} />
               <div className="mt-6 h-px w-12 bg-gold/60 transition-all duration-300 group-hover:w-20" />
               <h3 className="mt-6 font-display text-2xl text-offwhite">{title}</h3>
-              <p className="mt-4 text-sm leading-relaxed text-offwhite/70">{text}</p>
             </article>
           ))}
         </div>
