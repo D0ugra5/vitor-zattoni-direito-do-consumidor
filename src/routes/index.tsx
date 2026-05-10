@@ -297,7 +297,8 @@ function Row({ label, value }: { label: string; value: string }) {
 
 function Principles() {
   return (
-    <section className="border-t border-gold/15 bg-navy/40 py-24 md:py-36">
+    <section className="relative border-t border-gold/15 bg-navy-mid py-24 md:py-36">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-deep/60 to-transparent" />
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-gold">Valores</span>
