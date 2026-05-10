@@ -222,8 +222,8 @@ function Intro() {
             <div className="h-full rounded-sm border-l-2 border-gold/70 bg-navy-deep/50 p-8 shadow-[0_14px_40px_-18px_rgba(0,0,0,0.55)]">
               <span className="text-xs uppercase tracking-[0.3em] text-gold">Observação</span>
               <p className="mt-5 font-display text-xl italic leading-relaxed text-offwhite/90">
-                "Antes de assinar, comprar, vender, alugar ou regularizar um imóvel,
-                a análise documental pode evitar problemas futuros."
+                "No Direito Imobiliário, o problema pode não estar no imóvel, mas no
+                que não foi analisado antes da assinatura."
               </p>
             </div>
           </aside>
