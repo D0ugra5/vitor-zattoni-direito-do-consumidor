@@ -112,7 +112,7 @@ const documentos = [
 
 const faq = [
   { q: "Todo problema com empresa gera direito a indenização?", a: "Não. Cada situação precisa ser analisada individualmente, considerando fatos, documentos, provas e legislação aplicável." },
-  { q: "Preciso ter protocolos de atendimento?", a: "Protocolos, mensagens, e-mails e comprovantes podem ajudar na análise, mas os documentos necessários dependem do caso." },
+  
   { q: "Problemas com banco podem ser avaliados?", a: "Sim. Situações envolvendo cobranças, contratos, cartões, tarifas, bloqueios e outras questões bancárias podem ser analisadas." },
   { q: "Problemas com operadora podem ser avaliados?", a: "Sim. Questões envolvendo internet, telefone, planos, cancelamentos, cobranças e falhas no serviço podem ser analisadas." },
   { q: "O atendimento pode ser online?", a: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais." },
