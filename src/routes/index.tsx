@@ -137,7 +137,7 @@ function Hero() {
             Vitor Zattoni Advogado
           </span>
           <h1 className="mt-8 font-display text-5xl font-medium leading-[1.05] text-offwhite md:text-7xl">
-            Advocacia com clareza, estratégia e responsabilidade
+            Atuação com ética e responsabilidade
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
             Atuação jurídica em Direito Imobiliário, Inventário e Direito do Consumidor,
