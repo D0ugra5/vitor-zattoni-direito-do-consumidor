@@ -267,9 +267,6 @@ function About() {
               <Row label="Áreas" value="Imobiliário · Inventário · Consumidor" />
             </dl>
 
-            <p className="mt-10 font-display text-xl italic text-gold">
-              "Clareza, responsabilidade e estratégia na condução jurídica."
-            </p>
 
             <div className="mt-10">
               <WhatsAppButton variant="outline" size="lg">
