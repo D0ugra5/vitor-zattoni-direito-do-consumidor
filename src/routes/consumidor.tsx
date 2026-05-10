@@ -197,14 +197,15 @@ function Intro() {
           <div className="reveal md:col-span-3">
             <span className="text-xs uppercase tracking-[0.3em] text-gold">Visão geral</span>
             <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
-              Relações de consumo podem envolver dúvidas, prejuízos e insegurança
+              Quando uma empresa falha, o consumidor não precisa lidar com tudo sozinho
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
             <p className="mt-8 leading-relaxed text-offwhite/80">
-              Problemas com empresas, bancos, operadoras, produtos, serviços ou
-              contratos podem gerar dúvidas sobre quais medidas são possíveis. A
-              orientação jurídica contribui para avaliar documentos, compreender
-              direitos e indicar os próximos passos de forma responsável.
+              Cobranças indevidas, serviços não prestados, produtos com defeito,
+              contratos abusivos e negativações podem trazer prejuízos financeiros
+              e transtornos ao consumidor. A análise jurídica permite compreender o
+              caso, reunir os documentos necessários e orientar os próximos passos
+              com clareza e responsabilidade.
             </p>
           </div>
           <aside className="reveal md:col-span-2">
