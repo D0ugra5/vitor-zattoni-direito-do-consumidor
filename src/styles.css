@@ -44,6 +44,7 @@
 
   /* Brand palette */
   --navy-deep: oklch(0.20 0.04 255);   /* #0B1628 */
+  --navy-mid: oklch(0.23 0.042 255);    /* quebra sutil entre seções */
   --navy: oklch(0.26 0.045 255);
   --navy-light: oklch(0.32 0.04 255);
   --gold: oklch(0.76 0.10 80);          /* #C9A96E */
