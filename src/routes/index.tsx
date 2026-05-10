@@ -15,7 +15,7 @@ import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import heroImage from "@/assets/hero-library.jpg";
-import aboutImage from "@/assets/about-books.jpg";
+import aboutImage from "@/assets/vitor-zattoni.png";
 import transitionImage from "@/assets/transition-columns.jpg";
 
 export const Route = createFileRoute("/")({
@@ -238,7 +238,7 @@ function About() {
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-gold/40">
               <img
                 src={aboutImage}
-                alt="Livros jurídicos sobre mesa de madeira"
+                alt="Vitor Zattoni, advogado"
                 className="h-full w-full object-cover"
                 loading="lazy"
                 width={1024}
