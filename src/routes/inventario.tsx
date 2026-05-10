@@ -296,7 +296,7 @@ function JudicialExtrajudicial() {
               <Icon className="h-9 w-9 text-gold" strokeWidth={1.25} />
               <h3 className="mt-6 font-display text-2xl text-offwhite">{title}</h3>
               <div className="mt-4 h-px w-16 gold-divider" />
-              <p className="mt-6 leading-relaxed text-offwhite/75">{text}</p>
+              <p className="mt-6 text-justify leading-relaxed text-offwhite/75">{text}</p>
               <ul className="mt-8 space-y-3">
                 {items.map((it) => (
                   <li key={it} className="flex items-start gap-3 text-sm text-offwhite/80">
