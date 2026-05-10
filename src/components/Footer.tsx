@@ -17,8 +17,8 @@ export function Footer() {
               Atuação jurídica em Direito Imobiliário, Inventário e Direito do Consumidor.
             </p>
             <div className="mt-5 space-y-1 text-sm text-offwhite/65">
-              <div>OAB/UF: [inserir posteriormente]</div>
-              <div>Cidade/Estado: [inserir posteriormente]</div>
+              <div>OAB/PR: 125.654</div>
+              <div>Cidade/Estado: Quatro Barras - PR</div>
             </div>
           </div>
 
