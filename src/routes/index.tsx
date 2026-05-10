@@ -196,7 +196,7 @@ function Areas() {
       </div>
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal mx-auto max-w-2xl text-center">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold">Atuação</span>
+          
           <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
             Áreas de atuação
           </h2>
