@@ -249,7 +249,7 @@ function About() {
 
           <div className="reveal">
             <span className="text-xs uppercase tracking-[0.3em] text-gold">Sobre</span>
-            <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
+            <h2 className="mt-6 text-center font-display text-3xl font-medium text-offwhite md:text-5xl">
               Vitor Zattoni
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
