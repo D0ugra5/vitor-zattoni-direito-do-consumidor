@@ -116,8 +116,6 @@ function Page() {
       <Intro />
       <Necessidade />
       <JudicialExtrajudicial />
-      <ComoFunciona />
-      <Documentos />
       <Authority />
       <FAQ />
       <FinalCTA />
