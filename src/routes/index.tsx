@@ -306,7 +306,7 @@ function Principles() {
           {principles.map(({ icon: Icon, title, text }, i) => (
             <div
               key={title}
-              className="reveal flex flex-col items-start bg-navy-deep/70 p-8 transition-colors hover:bg-navy-deep/90"
+              className="reveal flex flex-col items-center text-center bg-navy-deep/70 p-8 transition-colors hover:bg-navy-deep/90"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <Icon className="h-7 w-7 text-gold" strokeWidth={1.25} />
