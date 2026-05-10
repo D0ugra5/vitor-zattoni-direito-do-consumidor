@@ -273,7 +273,7 @@ function Analise() {
               Antes de comprar um imóvel, é preciso saber se ele está realmente seguro para venda
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
-            <p className="mt-8 leading-relaxed text-offwhite/80">
+            <p className="mt-8 text-justify leading-relaxed text-offwhite/80">
               A compra de um imóvel envolve valores altos e não deve depender apenas da
               confiança entre as partes. Antes de assinar qualquer contrato, é importante
               verificar se existem pendências, dívidas, restrições ou problemas na
