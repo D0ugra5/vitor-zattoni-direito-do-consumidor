@@ -192,6 +192,9 @@ function Intro() {
 function Areas() {
   return (
     <section id="areas" className="relative bg-navy-mid py-24 md:py-36">
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-px flex justify-center">
+        <div className="h-px w-40 gold-divider md:w-64" />
+      </div>
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-gold">Atuação</span>
