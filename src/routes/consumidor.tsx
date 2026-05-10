@@ -180,15 +180,6 @@ function Hero() {
               Ver situações atendidas
             </a>
           </div>
-
-          <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-3">
-            {seals.map((s) => (
-              <li key={s} className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-offwhite/65">
-                <ShieldCheck className="h-3.5 w-3.5 text-gold" strokeWidth={1.5} />
-                {s}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>
