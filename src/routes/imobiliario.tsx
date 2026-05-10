@@ -168,7 +168,7 @@ function Hero() {
           <h1 className="mt-8 font-display text-5xl font-medium leading-[1.05] text-offwhite md:text-7xl">
             Segurança jurídica para comprar, vender, alugar ou regularizar imóveis
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
+          <p className="mt-8 max-w-2xl text-justify text-lg leading-relaxed text-offwhite/80 md:text-xl">
             Atuação em contratos imobiliários, locações, análise documental,
             regularização de imóveis e questões relacionadas à matrícula, posse e
             propriedade.
@@ -205,7 +205,7 @@ function Intro() {
               Segurança antes da assinatura, durante a negociação e na regularização do imóvel
             </h2>
             <div className="mt-6 h-px w-16 gold-divider" />
-            <p className="mt-8 leading-relaxed text-offwhite/80">
+            <p className="mt-8 text-justify leading-relaxed text-offwhite/80">
               Questões imobiliárias envolvem documentos, registros, contratos, prazos e
               responsabilidades que nem sempre aparecem de forma clara para quem está
               comprando, vendendo, alugando ou regularizando um imóvel. A atuação
