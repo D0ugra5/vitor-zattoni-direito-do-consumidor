@@ -134,8 +134,6 @@ function Page() {
       <Atuacao />
       <Analise />
       <Situacoes />
-      <ComoFunciona />
-      <Documentos />
       <Authority />
       <FAQ />
       <FinalCTA />
