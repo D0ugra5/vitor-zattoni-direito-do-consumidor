@@ -140,8 +140,7 @@ function Hero() {
             Atuação com ética e responsabilidade
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
-            Atuação jurídica em Direito Imobiliário, Inventário e Direito do Consumidor,
-            com atendimento individualizado e comunicação clara.
+            Atuação em Direito Imobiliário, Inventário e Direito do Consumidor.
           </p>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-offwhite/55">
             Uma abordagem profissional voltada à análise cuidadosa, segurança jurídica e
