@@ -140,7 +140,7 @@ function Hero() {
             Atuação com ética e responsabilidade
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-offwhite/80 md:text-xl">
-            Atuação em Direito Imobiliário, Inventário e Direito do Consumidor.
+            Direito Imobiliário - Inventário - Direito do Consumidor.
           </p>
 
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
