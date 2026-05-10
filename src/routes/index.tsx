@@ -191,14 +191,15 @@ function Intro() {
 
 function Areas() {
   return (
-    <section id="areas" className="relative border-t border-gold/20 bg-ivory py-24 md:py-36">
+    <section id="areas" className="relative border-t border-gold/15 bg-navy-mid py-24 md:py-36">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-deep/60 to-transparent" />
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-gold">Atuação</span>
-          <h2 className="mt-6 font-display text-3xl font-medium text-navy-deep md:text-5xl">
+          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
             Áreas de atuação
           </h2>
-          <p className="mt-5 text-muted-ink">
+          <p className="mt-5 text-offwhite/65">
             Conheça as principais frentes de atuação jurídica.
           </p>
         </div>
