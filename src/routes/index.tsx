@@ -89,7 +89,7 @@ const principles = [
   { icon: Eye, title: "Clareza", text: "Comunicação objetiva para que o cliente compreenda cada etapa." },
   { icon: ShieldCheck, title: "Comprometimento", text: "Análise cuidadosa e atuação baseada no caso concreto." },
   { icon: Lock, title: "Sigilo", text: "Tratamento profissional e reservado das informações apresentadas." },
-  { icon: Compass, title: "Estratégia", text: "Orientação jurídica considerando riscos, possibilidades e próximos passos." },
+  { icon: Compass, title: "Credibilidade", text: "Orientação jurídica considerando riscos, possibilidades e próximos passos." },
 ];
 
 function Home() {
