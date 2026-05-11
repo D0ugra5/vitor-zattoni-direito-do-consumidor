@@ -29,7 +29,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vitor Zattoni Advogado | Direito Imobiliário, Inventário e Consumidor" },
+      { title: "Vitor Zattoni - Sociedade Individual de Advocacia" },
       { name: "description", content: "Site institucional de Vitor Zattoni Advogado, com atuação em Direito Imobiliário, Inventário e Direito do Consumidor. Atendimento jurídico claro, sigiloso e individualizado." },
       { name: "author", content: "Vitor Zattoni Advogado" },
       { property: "og:title", content: "Vitor Zattoni Advogado" },
