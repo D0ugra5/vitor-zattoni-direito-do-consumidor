@@ -1,4 +1,5 @@
-import { WHATSAPP_URL } from "@/lib/whatsapp";
+import { useLocation } from "@tanstack/react-router";
+import { whatsappUrlForPath } from "@/lib/whatsapp";
 import { MessageCircle } from "lucide-react";
 
 type Props = {
@@ -28,9 +29,10 @@ export function WhatsAppButton({
     outline:
       "border border-gold/70 text-offwhite hover:border-gold hover:bg-gold/10",
   };
+  const { pathname } = useLocation();
   return (
     <a
-      href={WHATSAPP_URL}
+      href={whatsappUrlForPath(pathname)}
       target="_blank"
       rel="noopener noreferrer"
       className={`${base} ${sizes[size]} ${variants[variant]} ${className}`}
