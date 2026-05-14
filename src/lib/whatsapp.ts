@@ -1,2 +1,25 @@
-export const WHATSAPP_URL =
-  "https://wa.me/554197166921?text=Ol%C3%A1%2C%20Dr.%20Vitor%20Zattoni.%20Vim%20pelo%20site%20e%20gostaria%20de%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20um%20problema%20com%20empresa%2C%20cobran%C3%A7a%2C%20contrato%20ou%20servi%C3%A7o.%20Pode%20me%20ajudar%3F";
+const PHONE = "554197166921";
+
+export const WHATSAPP_MESSAGES: Record<string, string> = {
+  "/": "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação jurídica. Pode me ajudar?",
+  "/consumidor":
+    "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação jurídica sobre um problema com empresa, cobrança, contrato ou serviço. Pode me ajudar?",
+  "/inventario":
+    "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação jurídica sobre inventário. Pode me ajudar?",
+  "/imobiliario":
+    "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação jurídica sobre uma questão imobiliária. Pode me ajudar?",
+};
+
+export function buildWhatsappUrl(message?: string) {
+  const text = message ?? WHATSAPP_MESSAGES["/"];
+  return `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
+}
+
+export function whatsappUrlForPath(pathname: string) {
+  const key = Object.keys(WHATSAPP_MESSAGES).find(
+    (k) => k !== "/" && pathname.startsWith(k)
+  );
+  return buildWhatsappUrl(WHATSAPP_MESSAGES[key ?? "/"]);
+}
+
+export const WHATSAPP_URL = buildWhatsappUrl(WHATSAPP_MESSAGES["/"]);
