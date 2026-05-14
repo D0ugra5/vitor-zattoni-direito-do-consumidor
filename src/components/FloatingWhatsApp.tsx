@@ -1,9 +1,11 @@
-import { WHATSAPP_URL } from "@/lib/whatsapp";
+import { useLocation } from "@tanstack/react-router";
+import { whatsappUrlForPath } from "@/lib/whatsapp";
 
 export function FloatingWhatsApp() {
+  const { pathname } = useLocation();
   return (
     <a
-      href={WHATSAPP_URL}
+      href={whatsappUrlForPath(pathname)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar pelo WhatsApp"
