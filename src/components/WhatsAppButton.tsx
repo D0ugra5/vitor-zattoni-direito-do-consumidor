@@ -30,11 +30,30 @@ export function WhatsAppButton({
       "border border-gold/70 text-offwhite hover:border-gold hover:bg-gold/10",
   };
   const { pathname } = useLocation();
+  const href = whatsappUrlForPath(pathname);
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!pathname.startsWith("/consumidor")) return;
+    const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+    if (typeof gtag !== "function") return;
+    e.preventDefault();
+    let navigated = false;
+    const go = () => {
+      if (navigated) return;
+      navigated = true;
+      window.open(href, "_blank", "noopener,noreferrer");
+    };
+    gtag("event", "conversion", {
+      send_to: "AW-18153701329/dTn8CJ_px6wcENH_rdBD",
+      event_callback: go,
+    });
+    setTimeout(go, 1500);
+  };
   return (
     <a
-      href={whatsappUrlForPath(pathname)}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       className={`${base} ${sizes[size]} ${variants[variant]} ${className}`}
     >
       {withIcon && <MessageCircle className="h-4 w-4" strokeWidth={1.75} />}
