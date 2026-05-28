@@ -1,5 +1,5 @@
 import { useLocation } from "@tanstack/react-router";
-import { whatsappUrlForPath } from "@/lib/whatsapp";
+import { whatsappUrlForPath, CONVERSION_PATHS } from "@/lib/whatsapp";
 import { MessageCircle } from "lucide-react";
 
 type Props = {
