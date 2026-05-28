@@ -32,7 +32,7 @@ export function WhatsAppButton({
   const { pathname } = useLocation();
   const href = whatsappUrlForPath(pathname);
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!pathname.startsWith("/consumidor")) return;
+    if (!CONVERSION_PATHS.some((p) => pathname.startsWith(p))) return;
     const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
     if (typeof gtag !== "function") return;
     e.preventDefault();
