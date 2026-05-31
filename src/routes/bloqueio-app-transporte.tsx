@@ -21,6 +21,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import bloqueioHero from "@/assets/bloqueio-app-hero.jpg";
 
 export const Route = createFileRoute("/bloqueio-app-transporte")({
   head: () => ({
