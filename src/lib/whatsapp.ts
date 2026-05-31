@@ -8,8 +8,6 @@ export const WHATSAPP_MESSAGES: Record<string, string> = {
     "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação jurídica sobre inventário. Pode me ajudar?",
   "/imobiliario":
     "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação jurídica sobre uma questão imobiliária. Pode me ajudar?",
-  "/pensao-alimenticia":
-    "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação sobre pensão alimentícia. Pode me ajudar?",
 };
 
 export const CONVERSION_PATHS = ["/consumidor", "/pensao-alimenticia"] as const;
