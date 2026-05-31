@@ -256,7 +256,7 @@ function Situacoes() {
             Situações que podem ser analisadas
           </h2>
           <p className="mt-5 text-offwhite/65">
-            Conheça exemplos de bloqueios e desativações em aplicativos de transporte que podem exigir orientação jurídica.
+            Exemplos de bloqueio, desativação ou suspensão de conta em aplicativos de transporte e entrega — como Uber, 99, iFood e similares — que podem exigir orientação jurídica individual, tanto para motoristas quanto para passageiros e entregadores.
           </p>
         </div>
 
