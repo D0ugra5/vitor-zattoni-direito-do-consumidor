@@ -24,24 +24,101 @@ import {
 import bloqueioHero from "@/assets/bloqueio-app-hero.jpg";
 
 export const Route = createFileRoute("/bloqueio-app-transporte")({
-  head: () => ({
-    meta: [
-      { title: "Conta bloqueada ou desativada em aplicativo de transporte | Vitor Zattoni Advogado" },
-      {
-        name: "description",
-        content:
-          "Análise jurídica para bloqueio ou desativação de conta em aplicativos de transporte. Avaliação individual do caso com sigilo profissional.",
-      },
-      { property: "og:title", content: "Conta bloqueada ou desativada em aplicativo de transporte | Vitor Zattoni Advogado" },
-      {
-        property: "og:description",
-        content:
-          "Análise jurídica para bloqueio ou desativação de conta em aplicativos de transporte.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: bloqueioHero },
-    ],
-  }),
+  head: () => {
+    const url = "https://vitorzattoni.com.br/bloqueio-app-transporte";
+    const title =
+      "Conta bloqueada em aplicativo de transporte? Análise jurídica | Vitor Zattoni Advogado";
+    const description =
+      "Conta bloqueada, desativada ou suspensa em aplicativo de transporte (Uber, 99, iFood e similares)? Envie as informações do seu caso para análise jurídica individual.";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        {
+          name: "keywords",
+          content:
+            "conta bloqueada uber, conta desativada uber, conta bloqueada 99, desbloquear conta uber, motorista de aplicativo bloqueado, advogado para motorista de aplicativo, suspensão de conta em aplicativo de transporte",
+        },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: url },
+        { property: "og:image", content: bloqueioHero },
+        {
+          property: "og:image:alt",
+          content:
+            "Smartphone exibindo notificação de conta bloqueada em aplicativo de transporte",
+        },
+        { property: "og:locale", content: "pt_BR" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+        { name: "twitter:image", content: bloqueioHero },
+        { name: "robots", content: "index, follow" },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "O advogado pode desbloquear a conta no aplicativo de transporte?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Não há garantia de desbloqueio. A análise jurídica avalia as circunstâncias do caso, os termos de uso da plataforma e as possibilidades de contestação ou medidas cabíveis.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Todo bloqueio ou desativação de conta pode ser contestado?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Não. Cada situação precisa ser analisada individualmente, considerando fatos, documentos, termos de uso e legislação aplicável.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "O atendimento sobre bloqueio de conta pode ser online?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "O advogado pode garantir resultado na reativação da conta?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Não. Nenhum resultado pode ser garantido. A atuação depende da análise dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes.",
+                },
+              },
+            ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            name: "Vitor Zattoni Advogado",
+            description,
+            url,
+            areaServed: "BR",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Quatro Barras",
+              addressRegion: "PR",
+              addressCountry: "BR",
+            },
+          }),
+        },
+      ],
+    };
+  },
   component: Page,
 });
 
