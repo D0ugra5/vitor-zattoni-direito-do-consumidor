@@ -39,6 +39,7 @@ export const Route = createFileRoute("/bloqueio-app-transporte")({
           "Análise jurídica para bloqueio ou desativação de conta em aplicativos de transporte.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: bloqueioHero },
     ],
   }),
   component: Page,
