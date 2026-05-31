@@ -8,9 +8,11 @@ export const WHATSAPP_MESSAGES: Record<string, string> = {
     "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação jurídica sobre inventário. Pode me ajudar?",
   "/imobiliario":
     "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação jurídica sobre uma questão imobiliária. Pode me ajudar?",
+  "/bloqueio-app-transporte":
+    "Olá, Dr. Vitor Zattoni. Vim pelo site e gostaria de orientação jurídica sobre bloqueio ou desativação da minha conta em aplicativo de transporte. Pode me ajudar?",
 };
 
-export const CONVERSION_PATHS = ["/consumidor"] as const;
+export const CONVERSION_PATHS = ["/consumidor", "/bloqueio-app-transporte"] as const;
 
 export function buildWhatsappUrl(message?: string) {
   const text = message ?? WHATSAPP_MESSAGES["/"];

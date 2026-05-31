@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as InventarioRouteImport } from './routes/inventario'
 import { Route as ImobiliarioRouteImport } from './routes/imobiliario'
 import { Route as ConsumidorRouteImport } from './routes/consumidor'
+import { Route as BloqueioAppTransporteRouteImport } from './routes/bloqueio-app-transporte'
 import { Route as IndexRouteImport } from './routes/index'
 
 const InventarioRoute = InventarioRouteImport.update({
@@ -29,6 +30,11 @@ const ConsumidorRoute = ConsumidorRouteImport.update({
   path: '/consumidor',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BloqueioAppTransporteRoute = BloqueioAppTransporteRouteImport.update({
+  id: '/bloqueio-app-transporte',
+  path: '/bloqueio-app-transporte',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,12 +43,14 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/bloqueio-app-transporte': typeof BloqueioAppTransporteRoute
   '/consumidor': typeof ConsumidorRoute
   '/imobiliario': typeof ImobiliarioRoute
   '/inventario': typeof InventarioRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/bloqueio-app-transporte': typeof BloqueioAppTransporteRoute
   '/consumidor': typeof ConsumidorRoute
   '/imobiliario': typeof ImobiliarioRoute
   '/inventario': typeof InventarioRoute
@@ -50,20 +58,38 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/bloqueio-app-transporte': typeof BloqueioAppTransporteRoute
   '/consumidor': typeof ConsumidorRoute
   '/imobiliario': typeof ImobiliarioRoute
   '/inventario': typeof InventarioRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/consumidor' | '/imobiliario' | '/inventario'
+  fullPaths:
+    | '/'
+    | '/bloqueio-app-transporte'
+    | '/consumidor'
+    | '/imobiliario'
+    | '/inventario'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/consumidor' | '/imobiliario' | '/inventario'
-  id: '__root__' | '/' | '/consumidor' | '/imobiliario' | '/inventario'
+  to:
+    | '/'
+    | '/bloqueio-app-transporte'
+    | '/consumidor'
+    | '/imobiliario'
+    | '/inventario'
+  id:
+    | '__root__'
+    | '/'
+    | '/bloqueio-app-transporte'
+    | '/consumidor'
+    | '/imobiliario'
+    | '/inventario'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BloqueioAppTransporteRoute: typeof BloqueioAppTransporteRoute
   ConsumidorRoute: typeof ConsumidorRoute
   ImobiliarioRoute: typeof ImobiliarioRoute
   InventarioRoute: typeof InventarioRoute
@@ -92,6 +118,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsumidorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bloqueio-app-transporte': {
+      id: '/bloqueio-app-transporte'
+      path: '/bloqueio-app-transporte'
+      fullPath: '/bloqueio-app-transporte'
+      preLoaderRoute: typeof BloqueioAppTransporteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,6 +137,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BloqueioAppTransporteRoute: BloqueioAppTransporteRoute,
   ConsumidorRoute: ConsumidorRoute,
   ImobiliarioRoute: ImobiliarioRoute,
   InventarioRoute: InventarioRoute,
