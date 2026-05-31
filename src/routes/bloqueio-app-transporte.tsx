@@ -21,6 +21,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import bloqueioHero from "@/assets/bloqueio-app-hero.jpg";
 
 export const Route = createFileRoute("/bloqueio-app-transporte")({
   head: () => ({
@@ -38,6 +39,7 @@ export const Route = createFileRoute("/bloqueio-app-transporte")({
           "Análise jurídica para bloqueio ou desativação de conta em aplicativos de transporte.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: bloqueioHero },
     ],
   }),
   component: Page,
@@ -118,9 +120,17 @@ function Page() {
 function Hero() {
   return (
     <section className="relative isolate min-h-[100svh] overflow-hidden">
-      <div className="absolute inset-0 bg-hero-gradient" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy-deep/45" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-navy-deep/30" />
+      <div className="absolute inset-0">
+        <img
+          src={bloqueioHero}
+          alt="Smartphone sobre mesa escura exibindo notificação de conta bloqueada em aplicativo de transporte"
+          className="h-full w-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy-deep/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-navy-deep/30" />
+      </div>
 
       <div className="pointer-events-none absolute left-10 top-1/2 hidden h-40 w-px gold-divider rotate-90 md:block" />
       <div className="pointer-events-none absolute right-10 bottom-20 h-px w-32 gold-divider" />
