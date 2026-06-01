@@ -276,16 +276,10 @@ function Hero() {
             Pedir, revisar, executar valores em atraso ou discutir a exoneração da obrigação. Cada situação envolve circunstâncias próprias e exige uma análise jurídica individual, conduzida com a discrição que o tema exige.
           </p>
 
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-12">
             <WhatsAppButton size="lg" variant="primary" withIcon={false}>
               Solicitar análise do caso
             </WhatsAppButton>
-            <a
-              href="#situacoes"
-              className="inline-flex items-center justify-center gap-2 rounded-sm border border-gold/60 px-7 py-4 text-xs uppercase tracking-[0.2em] text-offwhite transition-all hover:border-gold hover:bg-gold/10"
-            >
-              Falar com a equipe
-            </a>
           </div>
 
           <p className="reveal mt-8 max-w-2xl text-sm italic text-offwhite/55">
