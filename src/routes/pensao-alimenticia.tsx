@@ -426,12 +426,9 @@ function FinalCTA() {
         <p className="reveal mx-auto mt-8 max-w-md leading-relaxed text-offwhite/75">
           Entre em contato pelo WhatsApp e envie as informações do seu caso para uma análise inicial, conduzida com a discrição que o tema exige.
         </p>
-        <div className="reveal mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="reveal mt-10">
           <WhatsAppButton size="lg" withIcon={false}>
             Solicitar análise do caso
-          </WhatsAppButton>
-          <WhatsAppButton size="lg" variant="outline" withIcon={false}>
-            Falar com a equipe
           </WhatsAppButton>
         </div>
         <p className="reveal mt-6 text-xs italic text-offwhite/55">
