@@ -225,16 +225,10 @@ function Hero() {
             Algumas situações podem exigir uma análise jurídica individual. Envie as informações do seu caso para que a equipe avalie os documentos e apresente as orientações adequadas.
           </p>
 
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-12">
             <WhatsAppButton size="lg" variant="primary" withIcon={false}>
               Solicitar análise do caso
             </WhatsAppButton>
-            <a
-              href="#situacoes"
-              className="inline-flex items-center justify-center gap-2 rounded-sm border border-gold/60 px-7 py-4 text-xs uppercase tracking-[0.2em] text-offwhite transition-all hover:border-gold hover:bg-gold/10"
-            >
-              Falar com a equipe
-            </a>
           </div>
 
           <p className="reveal mt-8 max-w-2xl text-sm italic text-offwhite/55">
@@ -375,12 +369,9 @@ function FinalCTA() {
         <p className="reveal mx-auto mt-8 max-w-md leading-relaxed text-offwhite/75">
           Entre em contato pelo WhatsApp e envie as informações do seu caso para uma análise inicial.
         </p>
-        <div className="reveal mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="reveal mt-10">
           <WhatsAppButton size="lg" withIcon={false}>
             Solicitar análise do caso
-          </WhatsAppButton>
-          <WhatsAppButton size="lg" variant="outline" withIcon={false}>
-            Falar com a equipe
           </WhatsAppButton>
         </div>
         <p className="reveal mt-6 text-xs italic text-offwhite/55">
