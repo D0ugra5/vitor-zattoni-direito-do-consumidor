@@ -14,12 +14,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import pensaoHero from "@/assets/pensao-alimenticia-hero.jpg";
 
 export const Route = createFileRoute("/pensao-alimenticia")({
@@ -57,63 +51,6 @@ export const Route = createFileRoute("/pensao-alimenticia")({
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Como é definido o valor da pensão alimentícia?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "O valor considera a necessidade de quem recebe e a possibilidade de quem paga, conforme análise das circunstâncias de cada caso e da legislação aplicável.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "É possível revisar o valor da pensão alimentícia?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "A revisão pode ser discutida quando houver alteração nas condições de quem paga ou de quem recebe. Cada situação é analisada individualmente.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "O que pode ser feito quando a pensão não é paga?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Existem medidas judiciais previstas em lei para cobrança de pensão alimentícia atrasada. Os caminhos cabíveis dependem da análise dos fatos e documentos do caso.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "A obrigação de pagar pensão alimentícia pode ser encerrada?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "A exoneração pode ser analisada quando há mudança relevante nas condições que originaram a obrigação. A avaliação é feita caso a caso, considerando a legislação aplicável.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "O atendimento sobre pensão alimentícia pode ser online?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais, com a discrição que o tema exige.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "É possível garantir o resultado de um processo de pensão alimentícia?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Não. Nenhum resultado pode ser garantido. A atuação depende dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes.",
-                },
-              },
-            ],
-          }),
-        },
         {
           type: "application/ld+json",
           children: JSON.stringify({
@@ -202,32 +139,6 @@ const etapas = [
   },
 ];
 
-const faq = [
-  {
-    q: "Como é definido o valor da pensão alimentícia?",
-    a: "O valor considera a necessidade de quem recebe e a possibilidade de quem paga, conforme análise das circunstâncias de cada caso e da legislação aplicável.",
-  },
-  {
-    q: "É possível revisar o valor já estabelecido?",
-    a: "A revisão pode ser discutida quando houver alteração nas condições de quem paga ou de quem recebe. Cada situação é analisada individualmente.",
-  },
-  {
-    q: "O que pode ser feito quando a pensão não é paga?",
-    a: "Existem medidas judiciais previstas em lei para cobrança de pensão alimentícia atrasada. Os caminhos cabíveis dependem da análise dos fatos e documentos do caso.",
-  },
-  {
-    q: "A obrigação de pagar pensão pode ser encerrada?",
-    a: "A exoneração pode ser analisada quando há mudança relevante nas condições que originaram a obrigação. A avaliação é feita caso a caso, considerando a legislação aplicável.",
-  },
-  {
-    q: "O atendimento pode ser online?",
-    a: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais, com a discrição que o tema exige.",
-  },
-  {
-    q: "É possível garantir o resultado do processo?",
-    a: "Não. Nenhum resultado pode ser garantido. A atuação depende dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes.",
-  },
-];
 
 function Page() {
   useReveal();
@@ -237,7 +148,7 @@ function Page() {
       <Hero />
       <Situacoes />
       <ComoFunciona />
-      <FAQ />
+      
       <FinalCTA />
       <Footer />
       <FloatingWhatsApp />
@@ -381,38 +292,6 @@ function ComoFunciona() {
   );
 }
 
-function FAQ() {
-  return (
-    <section className="relative border-t border-gold/15 bg-gradient-to-b from-navy-deep to-navy-mid py-24 md:py-32">
-      <div className="mx-auto max-w-3xl px-6">
-        <div className="reveal text-center">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold">Dúvidas</span>
-          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
-            Dúvidas frequentes
-          </h2>
-          <div className="mx-auto mt-6 h-px w-16 gold-divider" />
-        </div>
-
-        <Accordion type="single" collapsible className="reveal mt-12 space-y-3">
-          {faq.map((item, i) => (
-            <AccordionItem
-              key={item.q}
-              value={`item-${i}`}
-              className="rounded-sm border border-gold/25 bg-navy-deep/60 px-6"
-            >
-              <AccordionTrigger className="py-5 text-left font-display text-lg text-offwhite hover:text-gold hover:no-underline">
-                {item.q}
-              </AccordionTrigger>
-              <AccordionContent className="pb-6 text-sm leading-relaxed text-offwhite/75">
-                {item.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
-    </section>
-  );
-}
 
 function FinalCTA() {
   return (

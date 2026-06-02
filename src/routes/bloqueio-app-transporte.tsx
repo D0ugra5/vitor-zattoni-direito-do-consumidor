@@ -15,12 +15,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import bloqueioHero from "@/assets/bloqueio-app-hero.jpg";
 
 export const Route = createFileRoute("/bloqueio-app-transporte")({
@@ -58,47 +52,6 @@ export const Route = createFileRoute("/bloqueio-app-transporte")({
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "O advogado pode desbloquear a conta no aplicativo de transporte?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Não há garantia de desbloqueio. A análise jurídica avalia as circunstâncias do caso, os termos de uso da plataforma e as possibilidades de contestação ou medidas cabíveis.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Todo bloqueio ou desativação de conta pode ser contestado?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Não. Cada situação precisa ser analisada individualmente, considerando fatos, documentos, termos de uso e legislação aplicável.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "O atendimento sobre bloqueio de conta pode ser online?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "O advogado pode garantir resultado na reativação da conta?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Não. Nenhum resultado pode ser garantido. A atuação depende da análise dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes.",
-                },
-              },
-            ],
-          }),
-        },
         {
           type: "application/ld+json",
           children: JSON.stringify({
@@ -171,12 +124,6 @@ const etapas = [
   { icon: ArrowRight, title: "Orientação", text: "São explicados os caminhos possíveis e, se houver viabilidade, a forma de atuação profissional." },
 ];
 
-const faq = [
-  { q: "O advogado pode desbloquear a conta?", a: "Não há garantia de desbloqueio. A análise jurídica avalia as circunstâncias do caso, os termos de uso da plataforma e as possibilidades de contestação ou medidas cabíveis." },
-  { q: "Todo bloqueio pode ser contestado?", a: "Não. Cada situação precisa ser analisada individualmente, considerando fatos, documentos, termos de uso e legislação aplicável." },
-  { q: "O atendimento pode ser online?", a: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais." },
-  { q: "O advogado pode garantir resultado?", a: "Não. Nenhum resultado pode ser garantido. A atuação depende da análise dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes." },
-];
 
 function Page() {
   useReveal();
@@ -186,7 +133,7 @@ function Page() {
       <Hero />
       <Situacoes />
       <ComoFunciona />
-      <FAQ />
+      
       <FinalCTA />
       <Footer />
       <FloatingWhatsApp />
@@ -324,38 +271,6 @@ function ComoFunciona() {
   );
 }
 
-function FAQ() {
-  return (
-    <section className="relative border-t border-gold/15 bg-gradient-to-b from-navy-deep to-navy-mid py-24 md:py-32">
-      <div className="mx-auto max-w-3xl px-6">
-        <div className="reveal text-center">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold">Dúvidas</span>
-          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
-            Dúvidas frequentes
-          </h2>
-          <div className="mx-auto mt-6 h-px w-16 gold-divider" />
-        </div>
-
-        <Accordion type="single" collapsible className="reveal mt-12 space-y-3">
-          {faq.map((item, i) => (
-            <AccordionItem
-              key={item.q}
-              value={`item-${i}`}
-              className="rounded-sm border border-gold/25 bg-navy-deep/60 px-6"
-            >
-              <AccordionTrigger className="py-5 text-left font-display text-lg text-offwhite hover:text-gold hover:no-underline">
-                {item.q}
-              </AccordionTrigger>
-              <AccordionContent className="pb-6 text-sm leading-relaxed text-offwhite/75">
-                {item.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
-    </section>
-  );
-}
 
 function FinalCTA() {
   return (
