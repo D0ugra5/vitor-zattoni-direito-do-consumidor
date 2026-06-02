@@ -124,12 +124,6 @@ const etapas = [
   { icon: ArrowRight, title: "Orientação", text: "São explicados os caminhos possíveis e, se houver viabilidade, a forma de atuação profissional." },
 ];
 
-const faq = [
-  { q: "O advogado pode desbloquear a conta?", a: "Não há garantia de desbloqueio. A análise jurídica avalia as circunstâncias do caso, os termos de uso da plataforma e as possibilidades de contestação ou medidas cabíveis." },
-  { q: "Todo bloqueio pode ser contestado?", a: "Não. Cada situação precisa ser analisada individualmente, considerando fatos, documentos, termos de uso e legislação aplicável." },
-  { q: "O atendimento pode ser online?", a: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais." },
-  { q: "O advogado pode garantir resultado?", a: "Não. Nenhum resultado pode ser garantido. A atuação depende da análise dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes." },
-];
 
 function Page() {
   useReveal();
