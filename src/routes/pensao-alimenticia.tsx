@@ -55,63 +55,6 @@ export const Route = createFileRoute("/pensao-alimenticia")({
           type: "application/ld+json",
           children: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Como é definido o valor da pensão alimentícia?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "O valor considera a necessidade de quem recebe e a possibilidade de quem paga, conforme análise das circunstâncias de cada caso e da legislação aplicável.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "É possível revisar o valor da pensão alimentícia?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "A revisão pode ser discutida quando houver alteração nas condições de quem paga ou de quem recebe. Cada situação é analisada individualmente.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "O que pode ser feito quando a pensão não é paga?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Existem medidas judiciais previstas em lei para cobrança de pensão alimentícia atrasada. Os caminhos cabíveis dependem da análise dos fatos e documentos do caso.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "A obrigação de pagar pensão alimentícia pode ser encerrada?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "A exoneração pode ser analisada quando há mudança relevante nas condições que originaram a obrigação. A avaliação é feita caso a caso, considerando a legislação aplicável.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "O atendimento sobre pensão alimentícia pode ser online?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais, com a discrição que o tema exige.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "É possível garantir o resultado de um processo de pensão alimentícia?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Não. Nenhum resultado pode ser garantido. A atuação depende dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes.",
-                },
-              },
-            ],
-          }),
-        },
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "LegalService",
             name: "Vitor Zattoni Advogado",
             description,
