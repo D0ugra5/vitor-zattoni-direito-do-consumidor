@@ -148,7 +148,7 @@ function Page() {
       <Hero />
       <Situacoes />
       <ComoFunciona />
-      <FAQ />
+      
       <FinalCTA />
       <Footer />
       <FloatingWhatsApp />
