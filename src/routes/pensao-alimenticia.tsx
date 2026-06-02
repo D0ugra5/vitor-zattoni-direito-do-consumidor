@@ -14,12 +14,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import pensaoHero from "@/assets/pensao-alimenticia-hero.jpg";
 
 export const Route = createFileRoute("/pensao-alimenticia")({
