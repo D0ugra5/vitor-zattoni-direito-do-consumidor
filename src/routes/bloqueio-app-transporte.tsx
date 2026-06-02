@@ -56,47 +56,6 @@ export const Route = createFileRoute("/bloqueio-app-transporte")({
           type: "application/ld+json",
           children: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "O advogado pode desbloquear a conta no aplicativo de transporte?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Não há garantia de desbloqueio. A análise jurídica avalia as circunstâncias do caso, os termos de uso da plataforma e as possibilidades de contestação ou medidas cabíveis.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Todo bloqueio ou desativação de conta pode ser contestado?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Não. Cada situação precisa ser analisada individualmente, considerando fatos, documentos, termos de uso e legislação aplicável.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "O atendimento sobre bloqueio de conta pode ser online?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "O advogado pode garantir resultado na reativação da conta?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Não. Nenhum resultado pode ser garantido. A atuação depende da análise dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes.",
-                },
-              },
-            ],
-          }),
-        },
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "LegalService",
             name: "Vitor Zattoni Advogado",
             description,
