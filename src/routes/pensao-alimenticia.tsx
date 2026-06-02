@@ -139,32 +139,6 @@ const etapas = [
   },
 ];
 
-const faq = [
-  {
-    q: "Como é definido o valor da pensão alimentícia?",
-    a: "O valor considera a necessidade de quem recebe e a possibilidade de quem paga, conforme análise das circunstâncias de cada caso e da legislação aplicável.",
-  },
-  {
-    q: "É possível revisar o valor já estabelecido?",
-    a: "A revisão pode ser discutida quando houver alteração nas condições de quem paga ou de quem recebe. Cada situação é analisada individualmente.",
-  },
-  {
-    q: "O que pode ser feito quando a pensão não é paga?",
-    a: "Existem medidas judiciais previstas em lei para cobrança de pensão alimentícia atrasada. Os caminhos cabíveis dependem da análise dos fatos e documentos do caso.",
-  },
-  {
-    q: "A obrigação de pagar pensão pode ser encerrada?",
-    a: "A exoneração pode ser analisada quando há mudança relevante nas condições que originaram a obrigação. A avaliação é feita caso a caso, considerando a legislação aplicável.",
-  },
-  {
-    q: "O atendimento pode ser online?",
-    a: "Sim. Quando adequado, o atendimento inicial pode ser realizado por canais digitais, com a discrição que o tema exige.",
-  },
-  {
-    q: "É possível garantir o resultado do processo?",
-    a: "Não. Nenhum resultado pode ser garantido. A atuação depende dos fatos, documentos, provas, legislação aplicável e decisão das autoridades competentes.",
-  },
-];
 
 function Page() {
   useReveal();
