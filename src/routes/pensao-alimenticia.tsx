@@ -292,38 +292,6 @@ function ComoFunciona() {
   );
 }
 
-function FAQ() {
-  return (
-    <section className="relative border-t border-gold/15 bg-gradient-to-b from-navy-deep to-navy-mid py-24 md:py-32">
-      <div className="mx-auto max-w-3xl px-6">
-        <div className="reveal text-center">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold">Dúvidas</span>
-          <h2 className="mt-6 font-display text-3xl font-medium text-offwhite md:text-5xl">
-            Dúvidas frequentes
-          </h2>
-          <div className="mx-auto mt-6 h-px w-16 gold-divider" />
-        </div>
-
-        <Accordion type="single" collapsible className="reveal mt-12 space-y-3">
-          {faq.map((item, i) => (
-            <AccordionItem
-              key={item.q}
-              value={`item-${i}`}
-              className="rounded-sm border border-gold/25 bg-navy-deep/60 px-6"
-            >
-              <AccordionTrigger className="py-5 text-left font-display text-lg text-offwhite hover:text-gold hover:no-underline">
-                {item.q}
-              </AccordionTrigger>
-              <AccordionContent className="pb-6 text-sm leading-relaxed text-offwhite/75">
-                {item.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
-    </section>
-  );
-}
 
 function FinalCTA() {
   return (
